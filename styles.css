@@ -135,7 +135,7 @@ button {
 }
 
 .our-benefits-name {
-    padding-left: 5%;
+    padding-left: 10%;
     padding-top: 10%;
     width: 40%;
 }
@@ -197,4 +197,20 @@ button {
     margin-top: 40px;
     height: 40px;
     color: #97e372;
+}
+
+.our-solutions {
+    margin-top: 5%;
+    display: flex;
+    margin-right: 5%;
+}
+
+.our-solutions-name {
+    width: 40%;
+    margin-left: 10%;
+}
+
+.our-solutions-details {
+    width: 45%;
+    padding-left: 12%;
 }
