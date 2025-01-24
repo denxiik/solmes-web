@@ -7,8 +7,16 @@ h1 {
     font-size: 42px;
 }
 
-h3 {
+h2 {
     font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 12px;
 }
 
 button {
@@ -26,9 +34,7 @@ button {
 }
 
 .home {
-    position: absolute;
-    top: 25px;
-    display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     left: -0.1%;
@@ -80,7 +86,7 @@ button {
 }
 
 .home-success-info {
-    background-color: #ecedfb;
+    background-color: white;
     z-index: 3;
     position: absolute;
     display: flex;
@@ -112,6 +118,29 @@ button {
     font-size: 54px;
 }
 
-.home-success-text {
-    font-size: 18px;
+.our-benefits {
+    position: relative;
+    display: flex;
+}
+
+.our-benefits-name {
+    padding-left: 10%;
+    padding-top: 10%;
+    width: 50%;
+}
+
+.our-benefits-name-item {
+    margin-top: 10%;
+}
+
+.our-benefits-list {
+    width: 50%;
+    padding-top: 10%;
+}
+
+.our-benefits-list-item {
+    background-color: #e0eafe;
+    width: 35%;
+    height: 25%;
+    border-radius: 15px;
 }
