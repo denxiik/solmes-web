@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     background-color: #ffffff;
 }
 
@@ -15,14 +15,19 @@ h3 {
     font-size: 18px;
 }
 
+h4 {
+    font-size: 16px;
+}
+
 h5 {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 button {
     background-color: #9ee870;
     border: none;
-    color: black; 
+    color: black;
+    font-weight: bold;
     padding: 15px 30px;
     text-align: center;
     text-decoration: none;
@@ -50,16 +55,17 @@ button {
 }
 
 .h1-home {
-    top: 30%;
+    top: 25%;
 }
 
 .h3-home {
-    top: 50%;
+    top: 45%;
     max-width: 43%;
+    font-weight: normal;
 }
 
 .home-button {
-    top: 70%;
+    top: 60%;
     color: black;
 }
 
@@ -118,29 +124,77 @@ button {
     font-size: 54px;
 }
 
+.home-success-text {
+    font-weight: lighter;
+    color: #626964;
+}
+
 .our-benefits {
     position: relative;
     display: flex;
 }
 
 .our-benefits-name {
-    padding-left: 10%;
+    padding-left: 5%;
     padding-top: 10%;
-    width: 50%;
+    width: 40%;
 }
 
 .our-benefits-name-item {
     margin-top: 10%;
 }
 
+.our-benefits-name-details {
+    font-weight: lighter;
+    color: #626964;
+    font-size: 24px;
+}
+
 .our-benefits-list {
-    width: 50%;
+    width: 45%;
     padding-top: 10%;
+    padding-left: 7%;
+    display: block;
+}
+
+.our-benefits-list-column {
+    display: flex;
 }
 
 .our-benefits-list-item {
     background-color: #e0eafe;
-    width: 35%;
-    height: 25%;
+    margin: 2%;
+    width: 45%;
+    height: 100%;
     border-radius: 15px;
+}
+
+.our-benefits-list-item-name,
+.our-benefits-list-item-text,
+.our-benefits-list-item-more {
+    margin-left: 5%;
+    margin-right: 15%;
+}
+
+.our-benefits-list-item-name {
+    margin-top: 40px;
+    margin-right: 0;
+    height: 30px;
+    margin-bottom: 0px;
+    color: #3154e1;
+    display: flex;
+    align-items: center; 
+}
+
+.our-benefits-list-item-text {
+    height: 60px;
+    margin-top: 10px;
+    color: #6498ff;
+    font-weight: normal;
+}
+
+.our-benefits-list-item-more {
+    margin-top: 40px;
+    height: 40px;
+    color: #97e372;
 }
