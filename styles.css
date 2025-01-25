@@ -246,3 +246,39 @@ button {
     text-align: center;
     align-items: center;
 }
+
+.park4dis-succes-sample {
+    margin: 5%;
+    position: relative;
+}
+
+.park4dis-succes-sample-image {
+    border-radius: 25px;
+    max-width: 100%;
+    z-index: -1;
+}
+
+.park4dis-succes-sample-item {
+    position: absolute;
+    color: white;
+    left: 7%;
+    max-width: 35%;
+    text-align: left;
+    z-index: 1;
+}
+
+.h1-park4dis-succes-sample {
+    top: 25%;
+    font-size: 30px;
+}
+
+.h3-park4dis-succes-sample {
+    top: 35%;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.park4dis-succes-sample-more {
+    color: #97e372;
+    top: 65%;
+}
