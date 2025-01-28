@@ -218,17 +218,17 @@ button {
     display: flex;
     margin-right: 5%;
 }
-
-.our-solutions-name {
+.our-solutions .title {
     width: 40%;
     margin-left: 10%;
+    font-size: 2.5rem;
 }
-
-.our-solutions-details {
-    width: 45%;
-    padding-left: 12%;
+.our-solutions .subtitle {
+    width: 55%;
+    padding-left: 7%;
     color: #1c328d;
-    line-height: 2;
+    line-height: 1.5;
+    font-size: 1.2rem;
 }
 
 .our-solutions-list {
@@ -347,6 +347,19 @@ button {
         font-size: 1rem;
         bottom: 10rem;
     }
+
+    /* -------------------------
+        OUR SOLUTIONS SECTIONS
+    ------------------------- */
+    .our-solutions {
+        flex-direction: column;
+    }
+    .our-solutions .subtitle {
+        margin-top: 1rem;
+        width: 100%;
+        padding-left: 10%;
+        font-size: 1.5rem;
+    }
 }
 
 /* Small devices (phones, 768px and down) */
@@ -437,6 +450,14 @@ button {
         height: 3rem;
         font-size: 1rem;
     }
+
+    /* -------------------------
+        OUR SOLUTIONS SECTIONS
+    ------------------------- */
+    .our-solutions .subtitle {
+        line-height: 1.2;
+        font-size: 1rem;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -458,5 +479,17 @@ button {
         font-size: 1.2rem;
         height: 5rem;
     }
-     
+
+    /* -------------------------
+        OUR SOLUTIONS SECTIONS
+    ------------------------- */
+    .our-solutions .title {
+        width: 45%;
+    }
+    .our-solutions .subtitle {
+        width: 55%;
+        padding-left: 0%;
+        line-height: 1.5;
+        font-size: 1.8rem;
+    }
 }
