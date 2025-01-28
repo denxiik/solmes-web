@@ -1,40 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>SOLMES</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <meta charset="UTF-8" />
+  <title>Página de Movilidad Sostenible</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
-    <div class="home">
-        <h1 class="h1-home home-item">
-            Tu Partner de movilidad<br>
-            Sostenible e Inclusiva
+    <!-- Navigation bar -->
+    <nav class="home-nav">
+        <ul>
+          <li><a href="#" class="active">Inicio</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Ciudades</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+
+    <!-- HOME SECTION (home) -->
+  <section class="home">
+
+    <!-- Main text (Title and subtitle) -->
+    <div class="home-content">
+        <h1 class="home-title">
+        Tu Partner de movilidad<br>
+        Sostenible e Inclusiva
         </h1>
-        <h2 class="h3-home home-item">
-            Nuestra misión es liderar soluciones tecnológicas<br>
-            que optimicen la movilidad urbana e interurbana.
+        <h2 class="home-subtitle">
+        Nuestra misión es liderar soluciones tecnológicas<br>
+        que optimicen la movilidad urbana e interurbana.
         </h2>
-        <button class="home-button home-item">Saber más</button> 
-        <div class="home-image-container">
-            <img class="home-image" src="images/park4dis-app-sample.png" alt="Captura de pantalla de la aplicacoin android de Park4Dis"> 
-            <div class="home-success-info">
-                <div class="home-success-field home-success-rewards">
-                    <h1 class="home-success-count home-success-rewards-count">+15</h1>
-                    <h3 class="home-success-text home-success-rewards-text">Premios Ganados</h3>
-                </div>
-                <div class="home-success-field home-success-cities">
-                    <h1 class="home-success-count home-success-cities-count">20</h1>
-                    <h3 class="home-success-text home-success-cities-text">Ciudades</h3>
-                </div>
-                <div class="home-success-field home-success-users">
-                    <h1 class="home-success-count home-success-users-count">45M</h1>
-                    <h3 class="home-success-text home-success-users-text">Personas beneficiadas</h3>
-                </div>
-            </div>
-        </div> 
+
+        <!-- CTA Button -->
+        <button class="button">
+        Saber más
+        </button>
     </div>
+
+    <!-- Stats card in the bottom right corner -->
+    <div class="home-stats-card">
+      <div class="stat">
+        <h2>+15</h2>
+        <p>Premios Ganados</p>
+      </div>
+      <div class="stat">
+        <h2>20</h2>
+        <p>Ciudades</p>
+      </div>
+      <div class="stat">
+        <h2>45M</h2>
+        <p>Personas beneficiadas</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- update all down -->
 
     <div class="our-benefits">
         <div class="our-benefits-name">

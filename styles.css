@@ -1,133 +1,156 @@
+/* -------------------------
+   BASIC RESET
+------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-    font-family: Arial;
-    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
 }
 
-h1 {
-    font-size: 42px;
-}
-
-h2 {
-    font-size: 20px;
-}
-
-h3 {
-    font-size: 18px;
-}
-
-h4 {
-    font-size: 16px;
-}
-
-h5 {
-    font-size: 14px;
-}
-
-button {
+.button {
     background-color: #9ee870;
     border: none;
-    color: black;
+    color: #333;
     font-weight: bold;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 28px; 
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 30px;
-}
-
-.home {
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    left: -0.1%;
-}
-
-.home-item {
-    position: absolute;
-    color: white;
-    left: 7%;
-    max-width: 45%;
-    text-align: left;
-    z-index: 2;
-}
-
-.h1-home {
-    top: 25%;
-}
-
-.h3-home {
-    top: 45%;
-    max-width: 43%;
-    font-weight: normal;
-}
-
-.home-button {
-    top: 60%;
-    color: black;
-}
-
-.home-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.home-image-container::after {
-    content: "";
-    position: absolute;
-    width: 97%;
-    height: 100%;
-    max-width: 97%;
+    padding: 0.75rem 2rem;
     border-radius: 25px;
-    background: linear-gradient(to right, rgba(55, 87, 253, 1), rgba(0, 0, 255, 0.1));
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: #88d05b;
+}
+
+/* -------------------------
+   NAV BAR
+------------------------- */
+.home-nav {
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(175,189,252,255);
+    backdrop-filter: blur(10px);
+    padding: 0.6rem 0rem;
+    border-radius: 999px;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 1;
 }
-
-.home-image {
-    max-width: 97%;
-    border-radius: 25px;
-}
-
-.home-success-info {
-    background-color: white;
-    z-index: 3;
-    position: absolute;
+.home-nav ul {
     display: flex;
-    bottom: 0%;
-    right: 1.5%;
-    width: 45%;
-    height: 28%;
+    gap: 1rem;
+    list-style: none;
+}
+.home-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 0.6rem 0.9rem;
+    border-radius: 999px;
+}
+.home-nav a:hover,
+.home-nav a.active {
+    background-color: #ffffff;
+    color: black;
+}
+
+.home-nav a.active {
+    color: rgb(127,134,129);
+}
+/* -------------------------
+   HOME SECTION
+------------------------- */
+.home {
+    /* Gradient plus background image */
+    background: 
+        linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
+        url("images/park4dis-app-sample.png") center/cover no-repeat;
+
+    /* Container settings */
+    width: 95%;
+    margin: 1rem auto;
+    position: relative;
+    border-radius: 30px;
+    min-height: calc(90vh);
+    overflow: hidden;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+    /* Flexbox to center content */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    justify-content: space-between;
-    padding-left: 2%;
-    padding-right: 2%;
-    border-top-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    text-align: left;
 }
 
-.home-success-count,
-.home-success-text {
-    margin-bottom: 0;
-    margin-top: 0;
+/* Main content (title + subtitle + button) */
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: #fff;
+    max-width: 45%;
 }
 
-.home-success-field {
-    margin-top: 8%;
+.home-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.home-subtitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+/* Stats card in the bottom-right corner */
+.home-stats-card {
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+
+    /* Specific corner rounding */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    /* Increase padding for a larger card */
+    padding: 3rem 3rem;
+
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.home-stats-card .stat h2 {
+    font-size: 3rem;
     text-align: center;
     color: #081f97;
+    font-weight: 200;
 }
 
-.home-success-count {
-    font-size: 54px;
-}
-
-.home-success-text {
-    font-weight: lighter;
+.home-stats-card .stat p {
+    font-weight: 500;
     color: #626964;
+    margin: 0.2rem 2rem;
 }
+
+
+/* -------------------------
+   TODO DOWN
+------------------------- */
+
+
 
 .our-benefits {
     position: relative;
@@ -298,4 +321,149 @@ button {
     left: 50%;
     top: 4%;
     transform: translate(-50%, -0%);
+}
+
+/* Simple responsive fix (example for smaller screens) */
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+    /* -------------------------
+    BUTTON
+    ------------------------- */
+    .button {
+        padding: 0.55rem 1rem;
+        border-radius: 25px;
+        font-size: 1rem;
+    }
+
+    /* -------------------------
+    NAV BAR
+    ------------------------- */
+    .home-nav {
+        top: 2.5rem;
+    }
+    .home-nav ul {
+        gap: 0rem;
+    }
+    .home-nav a {
+        padding: 0.5rem 0.5rem;
+    }
+
+    /* -------------------------
+    HOME SECTION
+    ------------------------- */
+    .home {
+        width: 95%;
+        margin: 0.2rem auto;
+        min-height: calc(90vh);
+    }
+
+    /* Main content (title + subtitle + button) */
+    .home-content {
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        max-width: 100%;
+    }
+
+    .home-title {
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+    }
+    .home-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Stats card in the bottom-right corner */
+    .home-stats-card {
+        bottom: 0rem;
+        right: 0rem;
+
+        /* Increase padding for a larger card */
+        padding: 2rem 2rem;
+
+        border-top-left-radius: 0px;
+
+        gap: 0rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    .home-stats-card .stat h2 {
+        font-size: 1.5rem;
+    }
+
+    .home-stats-card .stat p {
+        margin: 0.2rem 1rem;
+    }    
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) { 
+    /* -------------------------
+       BUTTON
+    ------------------------- */
+    .button {
+        padding: 0.55rem 1rem;
+        border-radius: 25px;
+        font-size: 1rem;
+    }
+    
+    /* -------------------------
+       NAV BAR
+    ------------------------- */
+    .home-nav {
+        top: 2.5rem;
+    }
+    .home-nav ul {
+        gap: 0rem;
+    }
+    .home-nav a {
+        padding: 0.5rem 0.5rem;
+    }
+    
+    /* -------------------------
+       HOME SECTION
+    ------------------------- */
+    .home {
+        width: 95%;
+        margin: 0.2rem auto;
+        min-height: calc(90vh);
+    }
+    
+    /* Main content (title + subtitle + button) */
+    .home-content {
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        max-width: 100%;
+    }
+    
+    .home-title {
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+    }
+    .home-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Stats card in the bottom-right corner */
+    .home-stats-card {
+        bottom: 0rem;
+        right: 0rem;
+    
+        /* Increase padding for a larger card */
+        padding: 2rem 2rem;
+    
+        gap: 0rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+    
+    .home-stats-card .stat h2 {
+        font-size: 1.5rem;
+    }
+    
+    .home-stats-card .stat p {
+        margin: 0.2rem 1rem;
+    }    
 }
