@@ -146,23 +146,24 @@ button {
     position: relative;
     display: flex;
 }
-
+/* Main text (title and subtitle) */
 .our-benefits-name {
     padding-left: 8%;
-    padding-top: 10%;
+    padding-top: 15%;
     width: 50%;
 }
 .our-benefits-name .title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 2rem;
 }
 .our-benefits-name .subtitle {
     font-weight: lighter;
     color: #626964;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 3rem;
 }
 
+/* List of benefits (right part of 2x2 grid benefits) */
 .our-benefits-list {
     width: 65%;
     padding-top: 10%;
@@ -213,17 +214,18 @@ button {
 /* -------------------------
    OUR SOLUTIONS SECTIONS
 ------------------------- */
-.our-solutions {
+.our-solution {
     margin-top: 5%;
     display: flex;
     margin-right: 5%;
+    padding-left: 8%;
 }
-.our-solutions .title {
+.our-solution .title {
+    margin-top: 0%;
     width: 40%;
-    margin-left: 10%;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 }
-.our-solutions .subtitle {
+.our-solution .subtitle {
     width: 55%;
     padding-left: 7%;
     color: #1c328d;
@@ -231,30 +233,29 @@ button {
     font-size: 1.2rem;
 }
 
+/* List of solutions (3x3 grid) */
 .our-solutions-list {
     padding-top: 2%;
+    padding-left: 5%;
     padding-right: 5%;
     display: block;
 }
-
-.our-solutions-list-field {
+.our-solutions-list .field {
     display: flex;
 }
-
-.our-solutions-list-item {
+.our-solutions-list .item {
     background-color: #e0eafe;
     margin: 2%;
-    width: 400px;
-    height: 300px;
+    width: 25rem;
+    height: 20rem;
     border-radius: 35px;
     display:grid;
     align-items: center;
 }
-
-.our-solutions-list-item-name {
+.our-solutions-list .item .title {
     color: #152e92;
-    font-size: 38px;
-    margin: 5%;
+    font-size: 2rem;
+    margin: 10%;
     text-align: center;
     align-items: center;
 }
@@ -351,10 +352,10 @@ button {
     /* -------------------------
         OUR SOLUTIONS SECTIONS
     ------------------------- */
-    .our-solutions {
+    .our-solution {
         flex-direction: column;
     }
-    .our-solutions .subtitle {
+    .our-solution .subtitle {
         margin-top: 1rem;
         width: 100%;
         padding-left: 10%;
@@ -382,6 +383,24 @@ button {
     }
     .our-benefits-list .field .item .subtitle {
         height: 2rem;
+        font-size: 1rem;
+    }
+
+    /* -------------------------
+        OUR SOLUTIONS SECTIONS
+    ------------------------- */
+    .our-solution {
+        margin-right: 5%;
+        align-items: center;
+    }
+    .our-solution .title {
+        margin-left: 0%;
+    }
+
+    .our-solutions-list .item {
+        height: 5rem;
+    }
+    .our-solutions-list .item .title {
         font-size: 1rem;
     }
 }
@@ -444,6 +463,9 @@ button {
     .our-benefits-name {
         width: 50%;
     }
+    .our-benefits-name .title {
+        font-size: 2.5rem;
+    }
 
     .our-benefits-list .field .item .more {
         margin-top: 5rem;
@@ -454,8 +476,20 @@ button {
     /* -------------------------
         OUR SOLUTIONS SECTIONS
     ------------------------- */
-    .our-solutions .subtitle {
+    .our-solution .title {
+        margin-top: 0%;
+        font-size: 2.5REM;
+    }
+    .our-solution .subtitle {
         line-height: 1.2;
+        font-size: 1rem;
+    }
+
+    .our-solutions-list .item {
+        width: 15rem;
+        height: 10rem;
+    }
+    .our-solutions-list .item .title {
         font-size: 1rem;
     }
 }
@@ -483,13 +517,18 @@ button {
     /* -------------------------
         OUR SOLUTIONS SECTIONS
     ------------------------- */
-    .our-solutions .title {
+    .our-solution .title {
         width: 45%;
+        margin-top: 2%;
     }
-    .our-solutions .subtitle {
+    .our-solution .subtitle {
         width: 55%;
-        padding-left: 0%;
+        padding-left: 2%;
         line-height: 1.5;
         font-size: 1.8rem;
+    }
+
+    .our-solutions-list .item .title {
+        font-size: 2.5rem;
     }
 }
