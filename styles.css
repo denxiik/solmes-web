@@ -294,23 +294,25 @@ button {
     color: #97e372;
 }
 
+/* -------------------------
+   OUR CLIENTS SECTION
+------------------------- */
 .our-clients {
     margin: 5%;
     position: relative;
 }
-
-.our-clients-image {
+.our-clients .image {
     border-radius: 25px;
     max-width: 100%;
     position: relative;
 }
-
-.our-clients-name {
+.our-clients .title {
     text-align: center;
     position: absolute;
     left: 50%;
     top: 4%;
     transform: translate(-50%, -0%);
+    font-size: 2.5rem;
 }
 
 /* Simple responsive fix (example for smaller screens) */
@@ -360,6 +362,13 @@ button {
         width: 100%;
         padding-left: 10%;
         font-size: 1.5rem;
+    }
+
+    /* -------------------------
+        OUR CLIENTS SECTION
+    ------------------------- */
+    .our-clients .title {
+        font-size: 1rem;
     }
 }
 
@@ -423,6 +432,13 @@ button {
     .park4dis-succes-sample .content .more {
         position: absolute;
         top: 2rem;
+    }
+
+    /* -------------------------
+        OUR CLIENTS SECTION
+    ------------------------- */
+    .our-clients .title {
+        font-size: 1.5rem;
     }
 }
 
@@ -571,5 +587,12 @@ button {
     }
     .park4dis-succes-sample .content .subtitle {
         font-size: 1.2rem;
+    }
+
+    /* -------------------------
+        OUR CLIENTS SECTION
+    ------------------------- */
+    .our-clients .title {
+        font-size: 3.5rem;
     }
 }
