@@ -140,7 +140,7 @@ button {
 }
 
 /* -------------------------
-   OUR BENEFITS SECTIONS
+   OUR BENEFITS SECTION
 ------------------------- */
 .our-benefits {
     position: relative;
@@ -212,7 +212,7 @@ button {
 }
 
 /* -------------------------
-   OUR SOLUTIONS SECTIONS
+   OUR SOLUTIONS SECTION
 ------------------------- */
 .our-solution {
     margin-top: 5%;
@@ -222,12 +222,12 @@ button {
 }
 .our-solution .title {
     margin-top: 0%;
-    width: 40%;
+    width: 45%;
     font-size: 3.5rem;
 }
 .our-solution .subtitle {
     width: 55%;
-    padding-left: 7%;
+    padding-left: 5%;
     color: #1c328d;
     line-height: 1.5;
     font-size: 1.2rem;
@@ -260,38 +260,38 @@ button {
     align-items: center;
 }
 
+/* -------------------------
+   PARK4DIS SUCCES EXAMPLE SECTION
+------------------------- */
 .park4dis-succes-sample {
     margin: 5%;
     position: relative;
 }
-
-.park4dis-succes-sample-image {
+.park4dis-succes-sample .image {
     border-radius: 25px;
     max-width: 100%;
 }
 
-.park4dis-succes-sample-item {
+/* Content */
+.park4dis-succes-sample .content {
     position: absolute;
     color: white;
     left: 7%;
     max-width: 35%;
+    top: 25%;
     text-align: left;
 }
-
-.h1-park4dis-succes-sample {
-    top: 25%;
-    font-size: 30px;
+.park4dis-succes-sample .content .title {
+    margin-bottom: 8%;
+    font-size: 1.5rem;
 }
-
-.h3-park4dis-succes-sample {
-    top: 35%;
-    font-size: 16px;
+.park4dis-succes-sample .content .subtitle {
+    margin-bottom: 8%;
+    font-size: 1rem;
     font-weight: 100;
 }
-
-.park4dis-succes-sample-more {
+.park4dis-succes-sample .content .more {
     color: #97e372;
-    top: 65%;
 }
 
 .our-clients {
@@ -403,6 +403,27 @@ button {
     .our-solutions-list .item .title {
         font-size: 1rem;
     }
+
+    /* -------------------------
+        PARK4DIS SUCCES EXAMPLE SECTION
+    ------------------------- */
+    .park4dis-succes-sample .content {
+        max-width: 35%;
+        top: 40%;
+    }
+    .park4dis-succes-sample .content .title {
+        font-size: 1rem;
+        margin-bottom: 0%;
+    }
+    .park4dis-succes-sample .content .subtitle {
+        visibility:collapse;
+        margin-bottom: 0%;
+        font-size: 0rem;
+    }
+    .park4dis-succes-sample .content .more {
+        position: absolute;
+        top: 2rem;
+    }
 }
 
 /* Large devices (desktops, 992px and down) */
@@ -478,7 +499,7 @@ button {
     ------------------------- */
     .our-solution .title {
         margin-top: 0%;
-        font-size: 2.5REM;
+        font-size: 2.5rem;
     }
     .our-solution .subtitle {
         line-height: 1.2;
@@ -491,6 +512,16 @@ button {
     }
     .our-solutions-list .item .title {
         font-size: 1rem;
+    }
+
+    /* -------------------------
+        PARK4DIS SUCCES EXAMPLE SECTION
+    ------------------------- */
+    .park4dis-succes-sample .content .title {
+        font-size: 1rem;
+    }
+    .park4dis-succes-sample .content .subtitle {
+        font-size: 0.8rem;
     }
 }
 
@@ -530,5 +561,15 @@ button {
 
     .our-solutions-list .item .title {
         font-size: 2.5rem;
+    }
+
+    /* -------------------------
+        PARK4DIS SUCCES EXAMPLE SECTION
+    ------------------------- */
+    .park4dis-succes-sample .content .title {
+        font-size: 2rem;
+    }
+    .park4dis-succes-sample .content .subtitle {
+        font-size: 1.2rem;
     }
 }
