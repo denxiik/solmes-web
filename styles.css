@@ -98,11 +98,11 @@ button {
     color: #fff;
     max-width: 45%;
 }
-.home-title {
+.home .home-content .title {
     font-size: 2.5rem;
     margin-bottom: 2rem;
 }
-.home-subtitle {
+.home .home-content .subtitle {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 3rem;
@@ -195,7 +195,6 @@ button {
     display: flex;
     align-items: center; 
 }
-
 .our-benefits-list .field .item .subtitle {
     height: 4rem;
     font-size: 1rem;
@@ -203,7 +202,6 @@ button {
     color: #6498ff;
     font-weight: normal;
 }
-
 .our-benefits-list .field .item .more {
     margin-top: 2rem;
     height: 4rem;
@@ -314,6 +312,153 @@ button {
     transform: translate(-50%, -0%);
     font-size: 2.5rem;
 }
+
+/* -------------------------
+   OUR TECNOLOGIES SECTION
+------------------------- */
+.our-tecnologies {
+    background: #013199;
+    position: relative;
+    min-height: calc(90vh);
+    align-items: center;
+    padding-bottom: 10rem;
+}
+
+/* Main text (title and subtitle) */
+.our-tecnologies .content {
+    position: relative;
+    text-align: center;
+    top: 5rem;
+    left: 45%;
+    transform: translate(-45%, -0%);
+}
+.our-tecnologies .content .title {
+    font-size: 1.5rem;
+    color: #76dd35;
+}
+.our-tecnologies .content .subtitle {
+    font-size: 2rem;
+    margin-top: 2rem;
+    color: #f2f3f6;
+}
+
+/* List of tecnologies */
+/* General settings */
+.our-tecnologies .list {
+    margin-top: 10%;
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.our-tecnologies .list .field {
+    display: flex;
+}
+.our-tecnologies .list .field .item {
+    margin: 2%;
+    width: 100%;
+    height: 30rem;
+    border-radius: 15px;
+    padding: 1rem;
+}
+.our-tecnologies .list .field .item .title {
+    margin-top: 3rem;
+}
+.our-tecnologies .list .field .item .title,
+.our-tecnologies .list .field .title {
+    font-size: 1.6rem;
+    color: #cddaf8;
+}
+.our-tecnologies .list .field .item .subtitle {
+    margin-top: 2rem;
+    margin-right: 6rem;
+}
+.our-tecnologies .list .field .item .subtitle,
+.our-tecnologies .list .field .subtitle {
+    color: #cddaf8;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    font-weight: lighter;
+}
+
+/* labRa-sensors individual setting */
+.our-tecnologies .list .field .labRa-sensors {
+    background: url("images/lara-sensors.jpg") center/cover;
+}
+.our-tecnologies .list .field .labRa-sensors .title {
+    color: black;
+}
+.our-tecnologies .list .field .labRa-sensors .subtitle {
+    color: #2c429f;
+}
+
+/* inteligent-barrier individual setting */
+.our-tecnologies .list .field .inteligent-barrier {
+    background: url("images/inteligent-barrier.png") right/cover;
+}
+.our-tecnologies .list .field .inteligent-barrier .subtitle {
+    margin-right: 7rem;
+}
+
+/* api individual setting */
+.our-tecnologies .list .field .api {
+    background-color: #013ab1;
+    width: 50%;
+}
+.our-tecnologies .list .field .api .image {
+    width: 2rem;
+    height: 2rem;
+}
+.our-tecnologies .list .field .api .subtitle {
+    margin-right: 2%;
+}
+.our-tecnologies .list .field .api .more {
+    margin-top: 2rem;
+    color: #8ad66b;
+    font-size: 1rem;
+}
+
+/* bluetooth-tecnologie individual setting */
+.our-tecnologies .list .field .bluetooth-tecnologie {
+    background: url("images/bluetooth.jpg") right/cover;
+}
+.our-tecnologies .list .field .bluetooth-tecnologie .title {
+    margin-top: 1rem;
+    margin-bottom: 2%;
+}
+.our-tecnologies .list .field .bluetooth-tecnologie .more {
+    color: #3399ff;
+    font-size: 1rem;
+}
+.our-tecnologies .list .field .bluetooth-tecnologie .subtitle {
+    width: 15rem;
+}
+
+/* biometry individual setting */
+.our-tecnologies .list .biometry {
+    background: url("images/biometry.png") right/cover;
+    min-height: calc(70vh);
+    margin: 1rem;
+    border-radius: 15px;
+    display:grid;
+}
+.our-tecnologies .list .biometry .title,
+.our-tecnologies .list .biometry .subtitle {
+    margin-left: 2rem;
+}
+.our-tecnologies .list .biometry .title {
+    color: black;
+    margin-top: 6rem;
+}
+.our-tecnologies .list .biometry .subtitle {
+    position: relative;
+    top: -4rem;
+    width: 24rem;
+
+    font-weight: bold;
+    color: #808c95;
+}
+
+
 
 /* Simple responsive fix (example for smaller screens) */
 /* Small devices (landscape phones, 576px and down) */
@@ -481,11 +626,11 @@ button {
         transform: translateY(-50%);
         max-width: 100%;
     }
-    .home-title {
+    .home .home-content .title {
         font-size: 1.7rem;
         margin-bottom: 1rem;
     }
-    .home-subtitle {
+    .home .home-content .subtitle {
         font-size: 1.3rem;
         margin-bottom: 2rem;
     }
