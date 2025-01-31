@@ -30,7 +30,7 @@ button {
 /* -------------------------
    NAV BAR
 ------------------------- */
-.home-nav {
+nav {
     position: absolute;
     top: 3rem;
     left: 50%;
@@ -43,25 +43,58 @@ button {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 1;
 }
-.home-nav ul {
+nav ul {
     display: flex;
     gap: 1rem;
     list-style: none;
 }
-.home-nav a {
+nav a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
     padding: 0.6rem 0.9rem;
     border-radius: 999px;
 }
-.home-nav a:hover,
-.home-nav a.active {
+nav a:hover,
+nav a.active {
     background-color: #ffffff;
     color: black;
 }
-.home-nav a.active {
+nav a.active {
     color: rgb(127,134,129);
+}
+
+/* -------------------------
+   FOOTER
+------------------------- */
+footer {
+    position: relative;
+    bottom: 6rem;
+    left: 15%;
+    padding: 0.6rem 0rem;
+    border-radius: 999px;
+    font-weight: bold;
+    z-index: 1;
+    font-size: 0.8rem;
+}
+footer ul {
+    display: flex;  
+    list-style: none;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.6rem 0.9rem;
+    border-radius: 999px;
+}
+footer a:hover,
+footer a.active {
+    background-color: #9ee870;
+    color: black;
+}
+footer a.active {
+    color: black;
 }
 
 /* -------------------------
@@ -513,6 +546,13 @@ button {
 /* Small devices (landscape phones, 576px and down) */
 @media (max-width: 576px) { 
     /* -------------------------
+        FOOTER
+    ------------------------- */
+    footer a {
+        padding: 0.5rem;
+    }
+
+    /* -------------------------
         HOME SECTION
     ------------------------- */
     .home-stats-card {
@@ -707,13 +747,13 @@ button {
     /* -------------------------
        NAV BAR
     ------------------------- */
-    .home-nav {
+    nav {
         top: 2rem;
     }
-    .home-nav ul {
+    nav ul {
         gap: 0rem;
     }
-    .home-nav a {
+    nav a {
         padding: 0.5rem 0.5rem;
     }
     
@@ -821,7 +861,14 @@ button {
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
+    /* -------------------------
+        FOOTER
+    ------------------------- */
+    footer {
+        font-size: 01rem;
+    }
+
     /* -------------------------
        HOME SECTION
     ------------------------- */
