@@ -340,6 +340,8 @@ footer a.active {
 .our-clients .title {
     text-align: center;
     position: absolute;
+    left: 50%;
+    transform: translate(-50%, -0%);
     top: 4%;
     font-size: 2.5rem;
 }
