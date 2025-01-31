@@ -345,7 +345,7 @@ button {
 /* List of tecnologies */
 /* General settings */
 .our-tecnologies .list {
-    margin-top: 10%;
+    margin-top: 8%;
     text-align: left;
     margin-left: 10%;
     margin-right: 10%;
@@ -393,7 +393,7 @@ button {
 
 /* inteligent-barrier individual setting */
 .our-tecnologies .list .field .inteligent-barrier {
-    background: url("images/inteligent-barrier.png") right/cover;
+    background: url("images/inteligent-barrier.png") center/cover;
 }
 .our-tecnologies .list .field .inteligent-barrier .subtitle {
     margin-right: 7rem;
@@ -451,13 +451,12 @@ button {
 }
 .our-tecnologies .list .biometry .subtitle {
     position: relative;
-    top: -4rem;
+    bottom: 1rem;
     width: 24rem;
 
     font-weight: bold;
     color: #808c95;
 }
-
 
 
 /* Simple responsive fix (example for smaller screens) */
@@ -514,6 +513,28 @@ button {
     ------------------------- */
     .our-clients .title {
         font-size: 1rem;
+    }
+
+    /* -------------------------
+        OUR TECNOLOGIES SECTION
+    ------------------------- */
+    /* List of tecnologies */
+    .our-tecnologies .list {
+        padding-top: 10%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .our-tecnologies .list .field .item {
+        margin: 1%;
+        width: 100%;
+        height: 15rem;
+    }
+
+    /* biometry individual setting */
+    .our-tecnologies .list .biometry {
+         min-height: calc(30vh);
+         margin-left: 1%;
+         margin-right: 1%;
     }
 }
 
@@ -584,6 +605,31 @@ button {
     ------------------------- */
     .our-clients .title {
         font-size: 1.5rem;
+    }
+
+    /* -------------------------
+        OUR TECNOLOGIES SECTION
+    ------------------------- */
+    /* List of tecnologies */
+    .our-tecnologies .list {
+        margin-top: 15%;
+    }
+    .our-tecnologies .list .field .item .title,
+    .our-tecnologies .list .field .title {
+        font-size: 2rem;
+    }
+    .our-tecnologies .list .field .item .subtitle,
+    .our-tecnologies .list .field .subtitle {
+        display: none;
+    }
+
+    /* api individual setting */
+    .our-tecnologies .list .field .api .title {
+        margin-top: 1rem; 
+    }
+    .our-tecnologies .list .field .api .more {
+        margin-top: 1rem;
+        margin-top: 2%;
     }
 }
 
@@ -684,6 +730,33 @@ button {
     .park4dis-succes-sample .content .subtitle {
         font-size: 0.8rem;
     }
+
+    /* -------------------------
+        OUR TECNOLOGIES SECTION
+    ------------------------- */
+    /* List of tecnologies */
+    .our-tecnologies .list {
+        margin-top: 15%;
+    }
+    .our-tecnologies .list .field .item .subtitle,
+    .our-tecnologies .list .field .subtitle {
+        font-size: 1rem;
+    }
+
+    /* bluetooth-tecnologie individual setting */
+    .our-tecnologies .list .field .bluetooth-tecnologie .subtitle {
+        width: 7rem;
+    }
+
+    /* biometry individual setting */
+    .our-tecnologies .list .biometry .title {
+        margin-top: 3rem;
+    }
+    .our-tecnologies .list .biometry .subtitle {
+        top: 0rem;
+        bottom: 2rem;
+        width: 15rem;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -739,5 +812,23 @@ button {
     ------------------------- */
     .our-clients .title {
         font-size: 3.5rem;
+    }
+
+    /* -------------------------
+        OUR TECNOLOGIES SECTION
+    ------------------------- */
+    .our-tecnologies .list .field .item .title,
+    .our-tecnologies .list .field .title {
+        font-size: 2rem;
+    }
+
+    .our-tecnologies .list .field .item .subtitle,
+    .our-tecnologies .list .field .subtitle {
+        font-size: 1.4rem;
+    }
+
+    /* bluetooth-tecnologie individual setting */
+    .our-tecnologies .list .field .bluetooth-tecnologie .subtitle {
+        width: 20rem;
     }
 }
