@@ -85,6 +85,7 @@ footer {
     font-weight: bold;
     z-index: 1;
     font-size: 0.8rem;
+    max-width: 15%;
 }
 footer ul {
     display: flex;  
