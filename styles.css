@@ -27,6 +27,15 @@ button {
     background-color: #88d05b;
 }
 
+/* Temporarily unavailble */
+.home .home-content button,
+.our-benefits .our-benefits-name button,
+.our-benefits-list .field .item .more,
+.our-tecnologies .list .field .api .more,
+.our-tecnologies .list .field .bluetooth-tecnologie .more {
+    visibility: hidden;
+}
+
 /* -------------------------
    NAV BAR
 ------------------------- */
@@ -527,8 +536,7 @@ footer a.active {
     background-color: #013199;
     margin-left: 3rem;
     margin-right: 3rem;
-    border-top-left-radius: 35px;
-    border-top-right-radius: 35px;
+    border-radius: 35px;
     align-items: center;
 }
 .smart-wise-city .content {
