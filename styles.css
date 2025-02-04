@@ -255,14 +255,17 @@ footer a.active {
 /* -------------------------
    OUR SOLUTIONS SECTION
 ------------------------- */
+.our-solutions {
+    padding-left: 5%;
+    padding-right: 5%;
+}
 .our-solution {
     margin-top: 5%;
     display: flex;
-    margin-right: 5%;
-    padding-left: 8%;
 }
 .our-solution .title {
     margin-top: 0%;
+    padding-left: 3%;
     width: 45%;
     font-size: 3.5rem;
 }
@@ -277,8 +280,6 @@ footer a.active {
 /* List of solutions (3x3 grid) */
 .our-solutions-list {
     padding-top: 2%;
-    padding-left: 5%;
-    padding-right: 5%;
     display: block;
 }
 .our-solutions-list .field {
@@ -483,7 +484,7 @@ footer a.active {
     min-height: calc(70vh);
     margin: 1rem;
     border-radius: 15px;
-    display:grid;
+    display: block;
 }
 .our-tecnologies .list .biometry .title,
 .our-tecnologies .list .biometry .subtitle {
@@ -491,12 +492,12 @@ footer a.active {
 }
 .our-tecnologies .list .biometry .title {
     color: black;
-    margin-top: 6rem;
+    padding-top: 5rem;
 }
 .our-tecnologies .list .biometry .subtitle {
     position: relative;
-    bottom: 1rem;
-    width: 24rem;
+    width: 28rem;
+    padding-top: 1rem;
 
     font-weight: bold;
     color: #808c95;
@@ -583,6 +584,9 @@ footer a.active {
     /* -------------------------
         OUR BENEFITS SECTIONS
     ------------------------- */
+    .our-benefits-list {
+        padding-top: 0%;
+    }
     .our-benefits-list .field .item .title {
         margin-top: 1rem;
     }
@@ -868,7 +872,7 @@ footer a.active {
     .our-tecnologies .list .biometry .subtitle {
         top: 0rem;
         bottom: 2rem;
-        width: 15rem;
+        width: 20rem;
     }
 }
 
@@ -912,7 +916,7 @@ footer a.active {
         line-height: 1.5;
         font-size: 1.8rem;
     }
-
+    
     .our-solutions-list .item .title {
         font-size: 2.5rem;
     }
