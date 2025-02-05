@@ -120,6 +120,20 @@ footer a.active {
 /* -------------------------
    COOKIE
 ------------------------- */
+/* Styles for the floating cookie button */
+#floating-cookie-button {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 999;
+}
+
 /* Basic styling for the cookie banner */
 #cookie-banner {
     position: fixed;
@@ -216,7 +230,7 @@ footer a.active {
     font-weight: bold;
 }
 
-
+/* Style for the cookie settings */
 .switch {
     position: relative;
     display: inline-block;

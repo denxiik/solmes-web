@@ -358,6 +358,8 @@
         </ul>
     </footer>
 
+
+    <button id="floating-cookie-button"><i class="fas fa-cog"></i></button>
     <!-- Cookie banner -->
     <section id="cookie-banner" style="display:none;">
         <p>Utilizamos una selección de cookies propias y de terceros para mejorar su experiencia de navegación, analizar
@@ -471,6 +473,7 @@
         const learnMoreLink = document.getElementById('learn-more');
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
+        const floatingCookieButton = document.getElementById('floating-cookie-button');
 
         // Check localStorage *immediately*
         let consentCookie = localStorage.getItem('cookie_consent');
@@ -558,6 +561,10 @@
                 tabContents.forEach(content => content.classList.remove('active'));
                 document.getElementById(tabId).classList.add('active');
             });
+        });
+
+        floatingCookieButton.addEventListener('click', () => {
+            cookieDetailsOverlay.style.display = 'block';
         });
     </script>
 
