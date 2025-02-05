@@ -63,7 +63,7 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: #807f7f;
     font-weight: bold;
     padding: 0.6rem 0.9rem;
     border-radius: 999px;
@@ -76,7 +76,8 @@ nav a.active {
 }
 
 nav a.active {
-    color: rgb(127, 134, 129);
+    color: rgb(0, 209, 0);
+    font-weight: bold;
 }
 
 /* -------------------------
