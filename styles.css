@@ -149,12 +149,12 @@ footer a.active {
 }
 
 #cookie-banner button,
-#settings button {
+#cookie-settings button {
     padding: 0.5rem 1rem;
     font-size: 1.2rem;
 }
 
-#cookie-details-overlay {
+#settings-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -166,7 +166,7 @@ footer a.active {
     overflow-y: auto;
 }
 
-#cookie-details-overlay .close-button {
+#settings-overlay .close-button {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -184,7 +184,7 @@ footer a.active {
     color: #333;
 }
 
-#cookie-details-content {
+#details-content {
     position: relative;
     background-color: white;
     margin: 20px auto;
@@ -231,7 +231,7 @@ footer a.active {
     font-weight: bold;
 }
 
-/* Style for the cookie settings */
+/* Style for the cookie cookie-settings */
 .switch {
     position: relative;
     display: inline-block;

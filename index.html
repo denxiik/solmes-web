@@ -380,17 +380,44 @@
 
 
     <!-- Cookies overlay -->
-    <section id="cookie-details-overlay">
-        <div id="cookie-details-content">
+    <section id="settings-overlay">
+        <div id="details-content">
             <!-- Buttons -->
             <span class="close-button" onclick="closeCookieDetails()"> &times;</span>
 
             <div class="tab-buttons">
-                <button class="tab-button active" data-tab="details">Política de cookies</button>
-                <button class="tab-button" data-tab="settings">Cookies de terceros</button>
+                <button class="tab-button active" data-tab="cookie-settings">Cookies de terceros</button>
+                <button class="tab-button" data-tab="cookie-policy">Política de cookies</button>
+                <button class="tab-button" data-tab="legal-advise">Aviso Legal</button>
+                <button class="tab-button" data-tab="privacy-policy">Política de Privacidad</button>
             </div>
 
-            <div id="details" class="tab-content active">
+            <div id="cookie-settings" class="tab-content active">
+                <h2>Cookies de terceros</h2>
+                <p>
+                    Esta web utiliza Google Analytics para recopilar información anónima tal como el número de
+                    visitantes del sitio, o las páginas más populares.
+                    <br><br>
+                    Dejar esta cookie activa nos permite mejorar nuestra web.<br>
+                </p>
+
+                <label class="switch">
+                    <input type="checkbox" id="essentialCookies" checked disabled>
+                    <span class="slider"></span>
+                </label>
+                <span class="switch-label">Cookies essenciales (Siempre activos)</span><br>
+
+                <label class="switch">
+                    <input type="checkbox" id="analyticsCookies">
+                    <span class="slider"></span>
+                </label>
+                <span class="switch-label">Google Analytics</span><br>
+
+                <br>
+                <button id="save-cookie-settings">Gurdar cambios</button>
+            </div>
+
+            <div id="cookie-policy" class="tab-content">
                 <h2>Política de cookies</h2>
                 <p>¿Qué son las cookies?
                     <br><br>
@@ -432,29 +459,198 @@
                 </ul>
             </div>
 
-            <div id="settings" class="tab-content">
-                <h2>Cookies de terceros</h2>
-                <p>
-                    Esta web utiliza Google Analytics para recopilar información anónima tal como el número de
-                    visitantes del sitio, o las páginas más populares.
-                    <br><br>
-                    Dejar esta cookie activa nos permite mejorar nuestra web.<br>
+            <div id="legal-advise" class="tab-content">
+                <h2>Aviso Legal</h2>
+
+                <h3><br>Identificación del titular de la Web</h3>
+                <p>En cumplimiento de lo dispuesto en el artículo 10 de la Ley 34/2002, de 11 de julio, de servicios de
+                    la sociedad de la información y de comercio electrónico, le informamos de los siguientes datos:</p>
+                <ul>
+                    <li><strong>Titular de la web:</strong> Soluciones de movilidad especiales SL</li>
+                    <li><strong>CIF:</strong> B67421628</li>
+                    <li><strong>Domicilio social:</strong> C/de Biscaia 371 CP 08027, Barcelona.</li>
+                    <li><strong>Contacto:</strong> Si tiene alguna cuestión, puede comunicarse con nosotros, remitiendo
+                        un correo electrónico a info@solmes.net</li>
+                </ul>
+
+                <p>Las presentes condiciones regulan el acceso y navegación de los usuarios a través del presente sitio
+                    web. Mediante su visita, usted acepta estas condiciones. El titular podrá modificar en cualquier
+                    momento el contenido y finalidad de este sitio web, así como de las condiciones.</p>
+                <p>Un usuario se considera a la persona que visita nuestro sitio web, y por lo tanto, acepta las
+                    presentes condiciones.</p>
+                <p>Adicionalmente, proporcionamos información sobre los derechos y obligaciones de los usuarios en
+                    relación con la navegación a través de nuestro sitio web, así como las responsabilidades que
+                    pudieran derivarse.</p>
+
+                <h3><br>1. Reglas de uso del sitio web</h3>
+                <p>El usuario se compromete a no utilizar el sitio web o sus contenidos con fines ilegales o no
+                    autorizados, y hacer un uso conforme las presentes condiciones generales, siendo las consecuencias
+                    de su actuación de su exclusiva responsabilidad.</p>
+                <p>Esta responsabilidad se extiende a la información aportada por el usuario en cualquier momento, y en
+                    especial, en el momento de llevar a cabo, si fuera necesario, el registro en el sitio web. En el
+                    caso de que se le proporcione una contraseña de acceso, el usuario será responsable de su uso
+                    diligente y confidencial.</p>
+
+                <h3><br>2. Propiedad intelectual e industrial</h3>
+                <p>Soluciones de movilidad especiales SL es titular de todos los derechos de propiedad intelectual e
+                    industrial de esta página web (y contenidos publicados en sus redes sociales), o en su caso, cuenta
+                    con las licencias correspondientes sobre los derechos de explotación de propiedad intelectual e
+                    industrial del sitio web, así como de los elementos contenidos en la misma (a título enunciativo:
+                    imágenes, textos, marcas o logotipos, combinaciones de colores, estructura y diseño, etc.).</p>
+                <p>Quedan reservados todos los derechos de propiedad intelectual e industrial sobre los contenidos del
+                    sitio web y, en particular, queda prohibido modificar, copiar, reproducir, comunicar públicamente,
+                    transformar o distribuir, por cualquier medio y bajo cualquier forma, la totalidad o parte de los
+                    contenidos incluidos en el sitio web.</p>
+                <p>El usuario respetará los derechos de propiedad intelectual e industrial, pudiendo únicamente utilizar
+                    los contenidos del sitio web dentro de un ámbito doméstico y nunca con fines públicos o comerciales,
+                    sin la autorización expresa y por escrito de la empresa.</p>
+
+                <h3><br>3. Enlaces</h3>
+                <p>La presencia de enlaces de terceros en el sitio web no constituye actividad publicitaria o
+                    recomendación para la utilización del sitio web del tercero, o la posible contratación de servicios
+                    o productos que se ofrezcan en el destino.</p>
+                <p>El titular no asume ningún tipo de responsabilidad relacionada con el contenido, prácticas o
+                    disponibilidad de los sitios webs terceros.</p>
+                <p>El titular podría poner a disposición de los usuarios enlaces a sus perfiles de redes sociales. El
+                    titular no mantiene ningún tipo de relación con estas plataformas y no comparte información privada
+                    con ellos sobre sus usuarios. El acceso a estas redes sociales a través del sitio web podría
+                    implicar la autenticación del usuario en dicha red social, no controlando por lo tanto la empresa
+                    este entorno.</p>
+
+                <h3><br>4. Redes sociales</h3>
+                <p>El usuario se compromete a no utilizar los perfiles en redes sociales de la empresa, así como los
+                    contenidos en estos publicados con fines ilegales o no autorizados, respetando los establecido en
+                    las presentes condiciones y en la propia plataforma de la red social, siendo las consecuencias de su
+                    actuación de su exclusiva responsabilidad.</p>
+                <p>En particular, el titular no será responsable de cualquier contenido o material no publicado
+                    directamente por él, y en la medida de lo posible, tan pronto como tenga conocimiento de un
+                    contenido contrario a la normativa vigente, se compromete a retirarlo a la mayor brevedad posible.
                 </p>
 
-                <label class="switch">
-                    <input type="checkbox" id="essentialCookies" checked disabled>
-                    <span class="slider"></span>
-                </label>
-                <span class="switch-label">Cookies essenciales (Siempre activos)</span><br>
+                <h3><br>5. Confidencialidad y protección de datos personales</h3>
+                <p>El titular tratará los datos personales que nos facilite a través de su navegación a través del sitio
+                    web, de conformidad con la normativa vigente en materia de protección de datos. Para más
+                    información, consulte la política de privacidad.</p>
+                <p>El titular utiliza cookies en el presente sitio web. Para más información, consulte la política de
+                    cookies.</p>
 
-                <label class="switch">
-                    <input type="checkbox" id="analyticsCookies">
-                    <span class="slider"></span>
-                </label>
-                <span class="switch-label">Google Analytics</span><br>
+                <h3><br>6. Responsabilidad</h3>
+                <p>El titular se exime de cualquier tipo de responsabilidad derivada de cualquier daño que pudiera
+                    sufrir el usuario, o en consecuencia cualquier tercero, producido por el acceso y utilización del
+                    sitio web, por la imposibilidad de acceso, por confiar en la información facilitada en el mismo o al
+                    acceder a terceras páginas objeto de reenvío.</p>
+                <p>El titular no será responsable de los daños producidos por cualquiera que infrinja las presentes
+                    condiciones o los sistemas de seguridad del sitio web.</p>
+                <p>El titular no será responsable de los contenidos publicados o almacenados en cualquier medio puesto a
+                    disposición del usuario en el sitio web. No obstante, tan pronto como tenga conocimiento de un
+                    contenido contrario a la normativa vigente, se compromete a retirarlo a la mayor brevedad posible.
+                </p>
+                <p>El titular no será responsable de los posibles errores en la página web, de virus y/o otros
+                    componentes dañinos y de las circunstancias de fuerza mayor que influyan en la continuidad del sitio
+                    web o puedan causar daños a los usuarios.</p>
+                <p>En cualquier caso, Soluciones de movilidad especiales SL ha realizado todos los esfuerzos necesarios
+                    por mantener el sitio web actualizado, con una información fiable y de calidad, así como seguro y en
+                    continuo funcionamiento, adoptando todas las medidas necesarias desde el punto de vista
+                    jurídico-organizativo y técnico.</p>
+                <p>En caso de que el usuario considere que existe en el sitio web algún contenido que pudiera ser
+                    contrario a la legalidad, o tenga sospechas del incumplimiento de alguno de los puntos de estas
+                    condiciones, le regamos que lo notifique de forma inmediata mediante las vías de contacto
+                    establecidas.</p>
 
-                <br>
-                <button id="save-cookie-settings">Gurdar cambios</button>
+                <h3><br>7. Ley aplicable y jurisdicción</h3>
+                <p>Para la resolución de cualquier cuestión litigiosa relacionada con el presente sitio web, será de
+                    aplicación la legislación española vigente en el momento del litigio, a la que se someten
+                    expresamente las partes, siendo competentes para la resolución de todos los conflictos derivados o
+                    relacionados con su uso los Juzgados y Tribunales de la ciudad de Barcelona.</p>
+
+                <h3><br>8. Suspensión del sitio web</h3>
+                <p>Soluciones de movilidad Especiales SL podrá en cualquier momento suspender el funcionamiento de su
+                    sitio web, con o sin previa notificación, y sin que el usuario tenga posibilidad de exigir
+                    indemnización alguna por esta causa.</p>
+
+                <p><br>Última actualización: Enero 2024</p>
+            </div>
+
+            <div id="privacy-policy" class="tab-content">
+                <h2>Política de Privacidad</h2>
+
+                <h3><br>RESPONSABLE DEL TRATAMIENTO</h3>
+                <p>Soluciones de movilidad especiales SL<br>
+                    CIF: B67421628<br>
+                    Domicilio social: C/Biscaia 371 CP: 08027 Barcelona<br>
+                    Correo electrónico: info@solmes.net.org</p>
+
+                <h3><br>FINALIDADES Y LEGITIMACIÓN DEL TRATAMIENTO</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DONDE RECABAMOS LOS DATOS</th>
+                            <th>DATOS TRATADOS</th>
+                            <th>FINALIDAD Y BASE JURÍDICA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Formulario de contacto</td>
+                            <td>E-mail</td>
+                            <td>Resolver consultas relacionadas con la prestación de los servicios.
+                                <br>Consentimiento otorgado (Art. 6.1.a RGPD)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Formulario de registro</td>
+                            <td>Nombre y e-mail</td>
+                            <td>Registrarle como usuario y ofrecerle nuestros servicios.
+                                <br>Consentimiento otorgado (Art. 6.1.a RGPD)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Suscripción Newsletter</td>
+                            <td>Nombre y e-mail</td>
+                            <td>Suscripción a newsletter para informar sobre novedades de la empresa.
+                                <br>Consentimiento otorgado (Art. 6.1.a RGPD)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3><br>PLAZO DE CONSERVACIÓN DE SUS DATOS PERSONALES</h3>
+                <p>Los datos facilitados por el usuario serán conservados por Park4Dis durante el periodo de tiempo
+                    necesario para atender su consulta, mientras persista la relación comercial, mientras no se dé de
+                    baja como usuario o mientras no revoque su consentimiento. En cualquier caso, podremos conservar sus
+                    datos personales, debidamente bloqueados, para la atención de reclamaciones judiciales,
+                    administrativas o fiscales, por los plazos que legalmente determine cada normativa que resulte de
+                    aplicación.</p>
+
+                <h3><br>CATEGORÍAS DE LOS DESTINATARIOS DE LOS DATOS PERSONALES</h3>
+                <p>Sus datos personales no serán comunicados a terceros a excepción de aquellos prestadores de servicios
+                    necesarias para el desarrollo de los servicios de esta web.</p>
+
+                <h3><br>EJERCICIO DE LOS DERECHOS DEL INTERESADO</h3>
+                <p>Una vez que, como usuario de la WEB nos ha facilitado sus datos personales, la legislación vigente le
+                    permite como interesado de sus datos:</p>
+                <ul>
+                    <li>Solicitar el acceso a los datos personales relativos al interesado.</li>
+                    <li>Solicitar su rectificación o supresión.</li>
+                    <li>Solicitar la limitación de su tratamiento.</li>
+                    <li>Oponerse al tratamiento.</li>
+                    <li>Solicitar la portabilidad de los datos.</li>
+                    <li>Rechazar decisiones individuales automatizadas</li>
+                    <li>En su caso, revocar su consentimiento otorgado.</li>
+                </ul>
+                <p>Para ejercer cualquiera de los derechos descritos, el interesado tiene que hacer llegar dicha
+                    solicitud acompañada de fotocopia del DNI, pasaporte u otro documento válido que identifique al
+                    Usuario, o en su caso, de la persona que lo represente. Para ello, deberá enviar dicha solicitud a
+                    la siguiente dirección de correo: info@solmes.net</p>
+                <p>Los interesados pueden dirigir sus reclamaciones ante la Agencia Española de Protección de Datos.</p>
+
+                <h3><br>CAMBIOS EN LA POLÍTICA DE PRIVACIDAD</h3>
+                <p>La web se reserva el derecho a modificar la presente política para adaptarla a novedades legislativas
+                    o jurisprudenciales, así como a prácticas de la industria. En dichos supuestos, el Prestador
+                    anunciará en esta página los cambios introducidos con razonable antelación a su puesta en práctica.
+                </p>
+
+                <p><br>Última actualización: Enero 2024</p>
             </div>
 
         </div>
@@ -466,8 +662,8 @@
         const navLinks = document.querySelectorAll('nav a');
         const footerLinks = document.querySelectorAll('footer a');
         navLinks.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault(); 
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
 
                 const message = document.createElement('div');
                 message.textContent = "Disponible Próximamente";
@@ -477,15 +673,15 @@
                 setTimeout(() => {
                     document.body.removeChild(message);
                 }, 3000);
-                
+
 
 
             });
         });
 
         footerLinks.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault(); 
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
 
                 const message = document.createElement('div');
                 message.textContent = "Disponible Próximamente";
@@ -495,7 +691,7 @@
                 setTimeout(() => {
                     document.body.removeChild(message);
                 }, 3000);
-                
+
 
 
             });
@@ -506,7 +702,7 @@
         const acceptButton = document.getElementById('accept-cookies');
         const declineButton = document.getElementById('decline-cookies');
         const configureButton = document.getElementById('configure-cookies');
-        const cookieDetailsOverlay = document.getElementById('cookie-details-overlay');
+        const cookieDetailsOverlay = document.getElementById('settings-overlay');
         const analyticsCheckbox = document.getElementById('analyticsCookies');
         const marketingCheckbox = document.getElementById('marketingCookies');
         const saveButton = document.getElementById('save-cookie-settings');
