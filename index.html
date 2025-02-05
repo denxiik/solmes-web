@@ -389,10 +389,10 @@
             <span class="close-button" onclick="closeCookieDetails()"> &times;</span>
 
             <div class="tab-buttons">
-                <button class="tab-button active" data-tab="cookie-settings">Cookies de terceros</button>
-                <button class="tab-button" data-tab="cookie-policy">Política de cookies</button>
-                <button class="tab-button" data-tab="legal-advise">Aviso Legal</button>
+                <button class="tab-button active" data-tab="legal-advise">Aviso Legal</button>
                 <button class="tab-button" data-tab="privacy-policy">Política de Privacidad</button>
+                <button class="tab-button" data-tab="cookie-policy">Política de cookies</button>
+                <button class="tab-button" data-tab="cookie-settings">Cookies de terceros</button>
             </div>
 
             <div id="cookie-settings" class="tab-content active">
@@ -701,7 +701,7 @@
         });
 
         // Language settings
-        let currentLanguage = navigator.language || navigator.userLanguage || 'en'; 
+        let currentLanguage = navigator.language || navigator.userLanguage || 'en';
 
         function getLanguagePath(lang) {
             if (lang.startsWith('es')) {
