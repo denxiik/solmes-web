@@ -445,7 +445,7 @@
                     <input type="checkbox" id="essentialCookies" checked disabled>
                     <span class="slider"></span>
                 </label>
-                <span class="switch-label">Essential Cookies (Always Enabled)</span><br>
+                <span class="switch-label">Cookies essenciales (Siempre activos)</span><br>
 
                 <label class="switch">
                     <input type="checkbox" id="analyticsCookies">
@@ -468,6 +468,7 @@
         const configureButton = document.getElementById('configure-cookies');
         const cookieDetailsOverlay = document.getElementById('cookie-details-overlay');
         const analyticsCheckbox = document.getElementById('analyticsCookies');
+        const marketingCheckbox = document.getElementById('marketingCookies');
         const saveButton = document.getElementById('save-cookie-settings');
         const learnMoreLink = document.getElementById('learn-more');
         const tabButtons = document.querySelectorAll('.tab-button');
@@ -477,30 +478,25 @@
         // Check localStorage *immediately*
         let consentCookie = localStorage.getItem('cookie_consent');
 
-        if (consentCookie === null) { // Use null to check if not set
+        if (consentCookie === null) {
             cookieBanner.style.display = 'block';
         } else {
-            cookieBanner.style.display = 'none'; // Hide if it was previously set
+            cookieBanner.style.display = 'none';
         }
 
 
         acceptButton.addEventListener('click', () => {
-            localStorage.setItem('cookie_consent', '{"analytics": "true", "marketing": "true"}'); // Use localStorage
+            localStorage.setItem('cookie_consent', '{"analytics": "true", "marketing": "true"}');
             cookieBanner.style.display = 'none';
         });
 
         declineButton.addEventListener('click', () => {
-            localStorage.setItem('cookie_consent', '{"analytics": "false", "marketing": "false"}'); // Use localStorage
+            localStorage.setItem('cookie_consent', '{"analytics": "false", "marketing": "false"}');
             cookieBanner.style.display = 'none';
         });
 
         configureButton.addEventListener('click', () => {
-            cookieDetailsOverlay.style.display = 'block';
-            let consentCookie = localStorage.getItem('cookie_consent');
-            if (consentCookie !== null) {
-                let cookie_settings = JSON.parse(consentCookie);
-                analyticsCheckbox.checked = cookie_settings.analytics === 'true';
-            }
+            openCookieDelay();
         });
 
         saveButton.addEventListener('click', () => {
@@ -509,16 +505,23 @@
             };
 
             localStorage.setItem('cookie_consent', JSON.stringify(cookie_settings));
-            cookieDetailsOverlay.style.display = 'none'; // Close the overlay *after* saving
-            cookieBanner.style.display = 'none';
 
-            // ... (Your script loading/disabling logic) ...
+            closeCookieDetails();
         });
 
         learnMoreLink.addEventListener('click', (event) => {
             event.preventDefault();
             cookieDetailsOverlay.style.display = 'block';
         });
+
+        function openCookieDelay() {
+            cookieDetailsOverlay.style.display = 'block';
+            let consentCookie = localStorage.getItem('cookie_consent');
+            if (consentCookie !== null) {
+                let cookie_settings = JSON.parse(consentCookie);
+                analyticsCheckbox.checked = cookie_settings.analytics === 'true';
+            }
+        }
 
         function closeCookieDetails() {
             cookieDetailsOverlay.style.display = 'none';
@@ -543,7 +546,7 @@
         });
 
         floatingCookieButton.addEventListener('click', () => {
-            cookieDetailsOverlay.style.display = 'block';
+            openCookieDelay();
         });
     </script>
 
