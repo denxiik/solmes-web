@@ -486,12 +486,12 @@
 
 
         acceptButton.addEventListener('click', () => {
-            localStorage.setItem('cookie_consent', '{"analytics": "true", "marketing": "true"}');
+            localStorage.setItem('cookie_consent', '{"analytics": "true"}');
             cookieBanner.style.display = 'none';
         });
 
         declineButton.addEventListener('click', () => {
-            localStorage.setItem('cookie_consent', '{"analytics": "false", "marketing": "false"}');
+            localStorage.setItem('cookie_consent', '{"analytics": "false"');
             cookieBanner.style.display = 'none';
         });
 
