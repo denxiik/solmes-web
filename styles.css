@@ -163,6 +163,12 @@ footer a.active {
     border-radius: 5px;
 }
 
+#cookie-banner button#decline-cookies {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
 #cookie-details-content {
     position: relative;
     background-color: white;
