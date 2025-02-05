@@ -468,7 +468,6 @@
         const configureButton = document.getElementById('configure-cookies');
         const cookieDetailsOverlay = document.getElementById('cookie-details-overlay');
         const analyticsCheckbox = document.getElementById('analyticsCookies');
-        const marketingCheckbox = document.getElementById('marketingCookies');
         const saveButton = document.getElementById('save-cookie-settings');
         const learnMoreLink = document.getElementById('learn-more');
         const tabButtons = document.querySelectorAll('.tab-button');
@@ -501,39 +500,19 @@
             if (consentCookie !== null) {
                 let cookie_settings = JSON.parse(consentCookie);
                 analyticsCheckbox.checked = cookie_settings.analytics === 'true';
-                marketingCheckbox.checked = cookie_settings.marketing === 'true';
             }
         });
 
         saveButton.addEventListener('click', () => {
             let cookie_settings = {
-                analytics: analyticsCheckbox.checked ? 'true' : 'false',
-                marketing: marketingCheckbox.checked ? 'true' : 'false'
+                analytics: analyticsCheckbox.checked ? 'true' : 'false'
             };
 
             localStorage.setItem('cookie_consent', JSON.stringify(cookie_settings));
-            cookieDetailsOverlay.style.display = 'none';
+            cookieDetailsOverlay.style.display = 'none'; // Close the overlay *after* saving
             cookieBanner.style.display = 'none';
 
-            // Implement your script loading/disabling logic here based on cookie_settings
-            if (cookie_settings.analytics === 'true') {
-                // Load analytics scripts (example: dynamically add script tag)
-                let analyticsScript = document.createElement('script');
-                analyticsScript.src = 'your-analytics-script.js';  // Replace with your script URL
-                document.head.appendChild(analyticsScript);
-            } else {
-                // Disable analytics scripts (example: remove the script tag)
-                let analyticsScript = document.querySelector('script[src="your-analytics-script.js"]'); // Select the script
-                if (analyticsScript) {
-                    analyticsScript.remove();
-                }
-            }
-
-            if (cookie_settings.marketing === 'true') {
-                // Load marketing scripts
-            } else {
-                // Disable marketing scripts
-            }
+            // ... (Your script loading/disabling logic) ...
         });
 
         learnMoreLink.addEventListener('click', (event) => {
