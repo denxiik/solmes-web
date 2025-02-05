@@ -358,8 +358,11 @@
         </ul>
     </footer>
 
-
+    <!-- Floating buttons -->
+    <button class="language-button" onclick="toggleLanguage()">
+        <img class="language-flag" src="images/es.png" alt="Spanish Flag"> </button>
     <button id="floating-cookie-button"><i class="fas fa-cog"></i></button>
+
     <!-- Cookie banner -->
     <section id="cookie-banner" style="display:none;">
         <p>Utilizamos una selección de cookies propias y de terceros para mejorar su experiencia de navegación, analizar
@@ -696,6 +699,51 @@
 
             });
         });
+
+        // Language settings
+        let currentLanguage = navigator.language || navigator.userLanguage || 'en'; 
+
+        function getLanguagePath(lang) {
+            if (lang.startsWith('es')) {
+                return 'index.html';
+            } else {
+                return 'index_en.html';
+            }
+        }
+
+        const storedLanguage = localStorage.getItem('language');
+
+        if (storedLanguage) {
+            currentLanguage = storedLanguage;
+            document.querySelector('.language-flag').src = `images/${currentLanguage.slice(0, 2)}.png`; // Update flag
+
+            const expectedPath = getLanguagePath(currentLanguage);
+            const currentPath = window.location.pathname;
+
+            if (!currentPath.endsWith(expectedPath)) {
+                window.location.href = expectedPath;
+            }
+        } else {
+            const expectedPath = getLanguagePath(currentLanguage);
+            const currentPath = window.location.pathname;
+            document.querySelector('.language-flag').src = `images/${currentLanguage.slice(0, 2)}.png`; // Update flag
+
+            if (!currentPath.endsWith(expectedPath)) {
+                window.location.href = expectedPath;
+            }
+        }
+
+        function toggleLanguage() {
+            if (currentLanguage.startsWith('en')) {
+                currentLanguage = 'es';
+            } else {
+                currentLanguage = 'en';
+            }
+
+            document.querySelector('.language-flag').src = `images/${currentLanguage.slice(0, 2)}.png`; // Update flag
+            localStorage.setItem('language', currentLanguage);  // Save the user's choice
+            window.location.href = getLanguagePath(currentLanguage);
+        }
 
         // Cookies
         const cookieBanner = document.getElementById('cookie-banner');

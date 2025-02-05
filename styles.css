@@ -121,20 +121,6 @@ footer a.active {
 /* -------------------------
    COOKIE
 ------------------------- */
-/* Styles for the floating cookie button */
-#floating-cookie-button {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 999;
-}
-
 /* Basic styling for the cookie banner */
 #cookie-banner {
     position: fixed;
@@ -291,6 +277,39 @@ input:checked+.slider:before {
     vertical-align: middle;
     font-weight: bold;
     font-size: 0.9rem;
+}
+
+/* -------------------------
+   Floating button
+------------------------- */
+#floating-cookie-button {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.language-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.language-button img {
+    width: 30px;
+    height: 20px;
 }
 
 /* -------------------------
