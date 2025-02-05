@@ -6,8 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    font-family:Arial, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #fff;
     color: #333;
 }
@@ -23,6 +24,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 .button:hover {
     background-color: #88d05b;
 }
@@ -49,14 +51,16 @@ nav {
     padding: 0.6rem 0rem;
     border-radius: 999px;
     font-weight: bold;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
+
 nav ul {
     display: flex;
     gap: 1rem;
     list-style: none;
 }
+
 nav a {
     text-decoration: none;
     color: #333;
@@ -64,13 +68,15 @@ nav a {
     padding: 0.6rem 0.9rem;
     border-radius: 999px;
 }
+
 nav a:hover,
 nav a.active {
     background-color: #ffffff;
     color: black;
 }
+
 nav a.active {
-    color: rgb(127,134,129);
+    color: rgb(127, 134, 129);
 }
 
 /* -------------------------
@@ -87,10 +93,12 @@ footer {
     font-size: 0.8rem;
     max-width: 15%;
 }
+
 footer ul {
-    display: flex;  
+    display: flex;
     list-style: none;
 }
+
 footer a {
     text-decoration: none;
     color: white;
@@ -98,13 +106,170 @@ footer a {
     padding: 0.6rem 0.9rem;
     border-radius: 999px;
 }
+
 footer a:hover,
 footer a.active {
     background-color: #9ee870;
     color: black;
 }
+
 footer a.active {
     color: black;
+}
+
+/* -------------------------
+   COOKIE
+------------------------- */
+/* Basic styling for the cookie banner */
+#cookie-banner {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#cookie-banner button,
+#settings button {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+#cookie-details-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1001;
+    overflow-y: auto;
+}
+
+#cookie-details-overlay .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#cookie-details-content {
+    position: relative;
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 5px;
+}
+
+.tab-buttons {
+    display: flex;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+}
+
+.tab-button .active {
+    background-color: #ddd;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Style for the cookie details list */
+#cookie-details-list li {
+    margin-bottom: 10px;
+}
+
+#cookie-details-list strong {
+    font-weight: bold;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 1.7rem;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.3rem;
+    width: 1.3rem;
+    left: 0.2rem;
+    bottom: 0.2rem;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: green;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 0.1rem #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(1.5rem);
+    -ms-transform: translateX(1.5rem);
+    transform: translateX(1.5rem);
+}
+
+.switch-label {
+    margin-left: 0.8rem;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
 /* -------------------------
@@ -112,7 +277,7 @@ footer a.active {
 ------------------------- */
 .home {
     /* Gradient plus background image */
-    background: 
+    background:
         linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
         url("images/park4dis-app-sample.png") center/cover no-repeat;
 
@@ -124,7 +289,7 @@ footer a.active {
     min-height: calc(90vh);
     overflow: hidden;
     color: #fff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 
     /* Flexbox to center content */
     display: flex;
@@ -132,6 +297,7 @@ footer a.active {
     justify-content: center;
     text-align: left;
 }
+
 /* Main content (title + subtitle + button) */
 .home-content {
     position: absolute;
@@ -141,10 +307,12 @@ footer a.active {
     color: #fff;
     max-width: 45%;
 }
+
 .home .home-content .title {
     font-size: 2.5rem;
     margin-bottom: 2rem;
 }
+
 .home .home-content .subtitle {
     font-size: 1.2rem;
     font-weight: bold;
@@ -169,14 +337,16 @@ footer a.active {
     gap: 2rem;
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
+
 .home-stats-card .stat h2 {
     font-size: 3rem;
     text-align: center;
     color: #081f97;
     font-weight: 200;
 }
+
 .home-stats-card .stat p {
     font-weight: 500;
     color: #626964;
@@ -189,16 +359,19 @@ footer a.active {
     position: relative;
     display: flex;
 }
+
 /* Main text (title and subtitle) */
 .our-benefits-name {
     padding-left: 8%;
     padding-top: 15%;
     width: 50%;
 }
+
 .our-benefits-name .title {
     font-size: 3.5rem;
     margin-bottom: 2rem;
 }
+
 .our-benefits-name .subtitle {
     font-weight: lighter;
     color: #626964;
@@ -214,9 +387,11 @@ footer a.active {
     padding-right: 5%;
     display: block;
 }
+
 .our-benefits-list .field {
     display: flex;
 }
+
 .our-benefits-list .field .item {
     background-color: #e0eafe;
     margin: 2%;
@@ -224,20 +399,23 @@ footer a.active {
     height: 100%;
     border-radius: 15px;
 }
+
 .our-benefits-list .field .item .title,
 .our-benefits-list .field .item .subtitle,
 .our-benefits-list .field .item .more {
     margin-left: 5%;
     margin-right: 15%;
 }
+
 .our-benefits-list .field .item .title {
     margin-top: 2rem;
     font-size: 0.8rem;
     height: 2rem;
     color: #3154e1;
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
+
 .our-benefits-list .field .item .subtitle {
     height: 4rem;
     font-size: 1rem;
@@ -245,6 +423,7 @@ footer a.active {
     color: #6498ff;
     font-weight: normal;
 }
+
 .our-benefits-list .field .item .more {
     margin-top: 2rem;
     height: 4rem;
@@ -259,16 +438,19 @@ footer a.active {
     padding-left: 5%;
     padding-right: 5%;
 }
+
 .our-solution {
     margin-top: 5%;
     display: flex;
 }
+
 .our-solution .title {
     margin-top: 0%;
     padding-left: 3%;
     width: 45%;
     font-size: 3.5rem;
 }
+
 .our-solution .subtitle {
     width: 55%;
     padding-left: 5%;
@@ -282,18 +464,21 @@ footer a.active {
     padding-top: 2%;
     display: block;
 }
+
 .our-solutions-list .field {
     display: flex;
 }
+
 .our-solutions-list .item {
     background-color: #e0eafe;
     margin: 2%;
     width: 25rem;
     height: 20rem;
     border-radius: 35px;
-    display:grid;
+    display: grid;
     align-items: center;
 }
+
 .our-solutions-list .item .title {
     color: #152e92;
     font-size: 2rem;
@@ -309,6 +494,7 @@ footer a.active {
     margin: 5%;
     position: relative;
 }
+
 .park4dis-succes-sample .image {
     border-radius: 25px;
     max-width: 100%;
@@ -323,15 +509,18 @@ footer a.active {
     top: 25%;
     text-align: left;
 }
+
 .park4dis-succes-sample .content .title {
     margin-bottom: 8%;
     font-size: 1.5rem;
 }
+
 .park4dis-succes-sample .content .subtitle {
     margin-bottom: 8%;
     font-size: 1rem;
     font-weight: 100;
 }
+
 .park4dis-succes-sample .content .more {
     color: #97e372;
     text-decoration: none;
@@ -344,11 +533,13 @@ footer a.active {
     margin: 5%;
     position: relative;
 }
+
 .our-clients .image {
     border-radius: 25px;
     max-width: 100%;
     position: relative;
 }
+
 .our-clients .title {
     text-align: center;
     position: absolute;
@@ -377,10 +568,12 @@ footer a.active {
     left: 50%;
     transform: translate(-50%, -0%);
 }
+
 .our-tecnologies .content .title {
     font-size: 1.5rem;
     color: #76dd35;
 }
+
 .our-tecnologies .content .subtitle {
     font-size: 2rem;
     margin-top: 2rem;
@@ -395,9 +588,11 @@ footer a.active {
     margin-left: 10%;
     margin-right: 10%;
 }
+
 .our-tecnologies .list .field {
     display: flex;
 }
+
 .our-tecnologies .list .field .item {
     margin: 2%;
     width: 100%;
@@ -405,18 +600,22 @@ footer a.active {
     border-radius: 15px;
     padding: 1rem;
 }
+
 .our-tecnologies .list .field .item .title {
     margin-top: 3rem;
 }
+
 .our-tecnologies .list .field .item .title,
 .our-tecnologies .list .field .title {
     font-size: 1.6rem;
     color: #cddaf8;
 }
+
 .our-tecnologies .list .field .item .subtitle {
     margin-top: 2rem;
     margin-right: 6rem;
 }
+
 .our-tecnologies .list .field .item .subtitle,
 .our-tecnologies .list .field .subtitle {
     color: #cddaf8;
@@ -429,9 +628,11 @@ footer a.active {
 .our-tecnologies .list .field .labRa-sensors {
     background: url("images/lara-sensors.jpg") center/cover;
 }
+
 .our-tecnologies .list .field .labRa-sensors .title {
     color: black;
 }
+
 .our-tecnologies .list .field .labRa-sensors .subtitle {
     color: #2c429f;
 }
@@ -440,6 +641,7 @@ footer a.active {
 .our-tecnologies .list .field .inteligent-barrier {
     background: url("images/inteligent-barrier.png") center/cover;
 }
+
 .our-tecnologies .list .field .inteligent-barrier .subtitle {
     margin-right: 7rem;
 }
@@ -449,13 +651,16 @@ footer a.active {
     background-color: #013ab1;
     width: 50%;
 }
+
 .our-tecnologies .list .field .api .image {
     width: 2rem;
     height: 2rem;
 }
+
 .our-tecnologies .list .field .api .subtitle {
     margin-right: 2%;
 }
+
 .our-tecnologies .list .field .api .more {
     margin-top: 2rem;
     color: #8ad66b;
@@ -466,14 +671,17 @@ footer a.active {
 .our-tecnologies .list .field .bluetooth-tecnologie {
     background: url("images/bluetooth.jpg") right/cover;
 }
+
 .our-tecnologies .list .field .bluetooth-tecnologie .title {
     margin-top: 1rem;
     margin-bottom: 2%;
 }
+
 .our-tecnologies .list .field .bluetooth-tecnologie .more {
     color: #3399ff;
     font-size: 1rem;
 }
+
 .our-tecnologies .list .field .bluetooth-tecnologie .subtitle {
     width: 15rem;
 }
@@ -486,14 +694,17 @@ footer a.active {
     border-radius: 15px;
     display: block;
 }
+
 .our-tecnologies .list .biometry .title,
 .our-tecnologies .list .biometry .subtitle {
     margin-left: 2rem;
 }
+
 .our-tecnologies .list .biometry .title {
     color: black;
     padding-top: 5rem;
 }
+
 .our-tecnologies .list .biometry .subtitle {
     position: relative;
     width: 28rem;
@@ -510,22 +721,26 @@ footer a.active {
     align-items: center;
     position: relative;
 }
+
 .wise-human-city .content {
     position: relative;
     top: 4rem;
     text-align: center;
     margin-bottom: 10rem;
 }
+
 .wise-human-city .content .title {
     font-size: 1rem;
     color: #939ea5;
 }
+
 .wise-human-city .content .subtitle {
     font-size: 3rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
     color: black;
 }
+
 .wise-human-city .content .button {
     border-radius: 5px;
     font-size: 1rem;
@@ -542,27 +757,46 @@ footer a.active {
     border-radius: 35px;
     align-items: center;
 }
+
 .smart-wise-city .content {
     text-align: center;
     padding-bottom: 15rem;
 }
+
 .smart-wise-city .content .title {
     padding-top: 5rem;
     color: white;
     font-size: 3rem;
     line-height: 2;
     margin-bottom: 1rem;
-    letter-spacing: 0.1rem; 
+    letter-spacing: 0.1rem;
 }
 
 /* Simple responsive fix (example for smaller screens) */
 /* Small devices (landscape phones, 576px and down) */
-@media (max-width: 576px) { 
+@media (max-width: 576px) {
+
     /* -------------------------
         FOOTER
     ------------------------- */
     footer a {
         padding: 0.5rem;
+    }
+
+    /* -------------------------
+        COOKIE
+    ------------------------- */
+    #cookie-banner {
+        padding: 10px;
+        /* Smaller padding on mobile */
+    }
+
+    #cookie-banner button {
+        display: block;
+        /* Button on its own line */
+        margin: 10px auto 0;
+        /* Center the button */
+        width: 100%;
     }
 
     /* -------------------------
@@ -573,9 +807,11 @@ footer a.active {
         gap: 1rem;
         border-top-left-radius: 0px;
     }
+
     .home-stats-card .stat h2 {
         font-size: 2rem;
     }
+
     .home-stats-card .stat p {
         margin: 0rem 0.5rem;
         font-size: 0.7rem;
@@ -587,13 +823,16 @@ footer a.active {
     .our-benefits-list {
         padding-top: 0%;
     }
+
     .our-benefits-list .field .item .title {
         margin-top: 1rem;
     }
+
     .our-benefits-list .field .item .subtitle {
         margin-top: 0.5rem;
         height: 6rem;
     }
+
     .our-benefits-list .field .item .more {
         margin-top: 4rem;
         height: rem;
@@ -607,6 +846,7 @@ footer a.active {
     .our-solution {
         flex-direction: column;
     }
+
     .our-solution .subtitle {
         margin-top: 1rem;
         width: 100%;
@@ -630,6 +870,7 @@ footer a.active {
         margin-left: 2%;
         margin-right: 2%;
     }
+
     .our-tecnologies .list .field .item {
         margin: 1%;
         width: 100%;
@@ -638,9 +879,9 @@ footer a.active {
 
     /* biometry individual setting */
     .our-tecnologies .list .biometry {
-         min-height: calc(30vh);
-         margin-left: 1%;
-         margin-right: 1%;
+        min-height: calc(30vh);
+        margin-left: 1%;
+        margin-right: 1%;
     }
 
     /* -------------------------
@@ -649,6 +890,7 @@ footer a.active {
     .smart-wise-city .content {
         padding-bottom: 10rem;
     }
+
     .smart-wise-city .content .title {
         font-size: 2rem;
         line-height: 1.5;
@@ -656,7 +898,8 @@ footer a.active {
 }
 
 /* Small devices (phones, 768px and down) */
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
+
     /* -------------------------
         OUR BENEFITS SECTIONS
     ------------------------- */
@@ -664,15 +907,18 @@ footer a.active {
         flex-direction: column;
         align-items: center;
     }
+
     .our-benefits-name {
         padding-left: 5%;
         padding-right: 5%;
         width: 100%;
     }
+
     .our-benefits-list {
         width: 100%;
         padding-left: 5%;
     }
+
     .our-benefits-list .field .item .subtitle {
         height: 2rem;
         font-size: 1rem;
@@ -685,6 +931,7 @@ footer a.active {
         margin-right: 5%;
         align-items: center;
     }
+
     .our-solution .title {
         margin-left: 0%;
     }
@@ -692,6 +939,7 @@ footer a.active {
     .our-solutions-list .item {
         height: 5rem;
     }
+
     .our-solutions-list .item .title {
         font-size: 1rem;
     }
@@ -703,15 +951,18 @@ footer a.active {
         max-width: 35%;
         top: 40%;
     }
+
     .park4dis-succes-sample .content .title {
         font-size: 1rem;
         margin-bottom: 0%;
     }
+
     .park4dis-succes-sample .content .subtitle {
-        visibility:collapse;
+        visibility: collapse;
         margin-bottom: 0%;
         font-size: 0rem;
     }
+
     .park4dis-succes-sample .content .more {
         position: absolute;
         top: 2rem;
@@ -731,10 +982,12 @@ footer a.active {
     .our-tecnologies .list {
         margin-top: 15%;
     }
+
     .our-tecnologies .list .field .item .title,
     .our-tecnologies .list .field .title {
         font-size: 2rem;
     }
+
     .our-tecnologies .list .field .item .subtitle,
     .our-tecnologies .list .field .subtitle {
         display: none;
@@ -742,8 +995,9 @@ footer a.active {
 
     /* api individual setting */
     .our-tecnologies .list .field .api .title {
-        margin-top: 1rem; 
+        margin-top: 1rem;
     }
+
     .our-tecnologies .list .field .api .more {
         margin-top: 1rem;
         margin-top: 2%;
@@ -751,7 +1005,8 @@ footer a.active {
 }
 
 /* Large devices (desktops, 992px and down) */
-@media (max-width: 992px) { 
+@media (max-width: 992px) {
+
     /* -------------------------
        BUTTON
     ------------------------- */
@@ -759,20 +1014,22 @@ footer a.active {
         padding: 0.55rem 1rem;
         font-size: 1rem;
     }
-    
+
     /* -------------------------
        NAV BAR
     ------------------------- */
     nav {
         top: 2rem;
     }
+
     nav ul {
         gap: 0rem;
     }
+
     nav a {
         padding: 0.5rem 0.5rem;
     }
-    
+
     /* -------------------------
        HOME SECTION
     ------------------------- */
@@ -781,7 +1038,7 @@ footer a.active {
         margin: 0.5rem auto;
         min-height: calc(90vh);
     }
-    
+
     /* Main content (title + subtitle + button) */
     .home-content {
         top: 50%;
@@ -789,15 +1046,17 @@ footer a.active {
         transform: translateY(-50%);
         max-width: 100%;
     }
+
     .home .home-content .title {
         font-size: 1.7rem;
         margin-bottom: 1rem;
     }
+
     .home .home-content .subtitle {
         font-size: 1.3rem;
         margin-bottom: 2rem;
     }
-    
+
     .home-stats-card {
         gap: 2rem;
     }
@@ -808,6 +1067,7 @@ footer a.active {
     .our-benefits-name {
         width: 50%;
     }
+
     .our-benefits-name .title {
         font-size: 2.5rem;
     }
@@ -825,6 +1085,7 @@ footer a.active {
         margin-top: 0%;
         font-size: 2.5rem;
     }
+
     .our-solution .subtitle {
         line-height: 1.2;
         font-size: 1rem;
@@ -834,6 +1095,7 @@ footer a.active {
         width: 15rem;
         height: 10rem;
     }
+
     .our-solutions-list .item .title {
         font-size: 1rem;
     }
@@ -844,6 +1106,7 @@ footer a.active {
     .park4dis-succes-sample .content .title {
         font-size: 1rem;
     }
+
     .park4dis-succes-sample .content .subtitle {
         font-size: 0.8rem;
     }
@@ -855,6 +1118,7 @@ footer a.active {
     .our-tecnologies .list {
         margin-top: 15%;
     }
+
     .our-tecnologies .list .field .item .subtitle,
     .our-tecnologies .list .field .subtitle {
         font-size: 1rem;
@@ -869,6 +1133,7 @@ footer a.active {
     .our-tecnologies .list .biometry .title {
         margin-top: 3rem;
     }
+
     .our-tecnologies .list .biometry .subtitle {
         top: 0rem;
         bottom: 2rem;
@@ -878,6 +1143,7 @@ footer a.active {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+
     /* -------------------------
         FOOTER
     ------------------------- */
@@ -892,12 +1158,14 @@ footer a.active {
         padding: 4rem 4rem;
         gap: 4rem;
     }
+
     /* -------------------------
         OUR BENEFITS SECTIONS
     ------------------------- */
     .our-benefits-list {
         width: 75%;
     }
+
     .our-benefits-list .field .item .subtitle {
         font-size: 1.2rem;
         height: 5rem;
@@ -910,13 +1178,14 @@ footer a.active {
         width: 45%;
         margin-top: 2%;
     }
+
     .our-solution .subtitle {
         width: 55%;
         padding-left: 2%;
         line-height: 1.5;
         font-size: 1.8rem;
     }
-    
+
     .our-solutions-list .item .title {
         font-size: 2.5rem;
     }
@@ -927,6 +1196,7 @@ footer a.active {
     .park4dis-succes-sample .content .title {
         font-size: 2rem;
     }
+
     .park4dis-succes-sample .content .subtitle {
         font-size: 1.2rem;
     }
