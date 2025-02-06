@@ -28,7 +28,7 @@
         <div class="home-content">
             <h1 class="title">
                 Tu Partner de movilidad<br>
-                Sostenible e Inclusiva
+                sostenible e inclusiva
             </h1>
             <h2 class="subtitle">
                 Nuestra misión es liderar soluciones tecnológicas<br>
@@ -43,7 +43,7 @@
         <div class="home-stats-card">
             <div class="stat">
                 <h2>+15</h2>
-                <p>Premios Ganados</p>
+                <p>Premios ganados</p>
             </div>
             <div class="stat">
                 <h2>20</h2>
@@ -132,15 +132,15 @@
             <div class="field">
                 <div class="item">
                     <h1 class="title">Gestión de la
-                        Movilidad</h1>
+                        movilidad</h1>
                 </div>
                 <div class="item">
                     <h1 class="title">Gestión de la
-                        Accesibilidad</h1>
+                        accesibilidad</h1>
                 </div>
                 <div class="item">
                     <h1 class="title">Guiado del
-                        Usuario</h1>
+                        usuario</h1>
                 </div>
             </div>
             <div class="field">
@@ -149,8 +149,8 @@
                         parking</h1>
                 </div>
                 <div class="item">
-                    <h1 class="title">Spot<br>
-                        Sharing</h1>
+                    <h1 class="title">Compartir
+                        plazas</h1>
                 </div>
                 <div class="item">
                     <h1 class="title">Aparcamientos
@@ -171,7 +171,7 @@
                 </div>
                 <div class="item">
                     <h1 class="title">Planificación de
-                        Ruta</h1>
+                        ruta</h1>
                 </div>
             </div>
         </div>
@@ -332,7 +332,7 @@
                 Wise Human City.<br>
                 Únete al nuevo paradigma.
             </h1>
-            <button class="button">Solicitar información</button>
+            <button>Solicitar información</button>
         </div>
     </section>
 
@@ -343,7 +343,7 @@
                 Smart City a Wise City<br>
                 El Usuario En El Centro
             </h1>
-            <button>Contactar con ventas</button>
+            <button id="emailButton">Contactar con ventas</button>
         </div>
     </section>
 
@@ -680,6 +680,33 @@
 
 
             });
+        });
+
+        document.getElementById("emailButton").addEventListener("click", function () {
+            var email = "info@solmes.com";
+            var subject = encodeURIComponent("Consulta de ventas");
+            var body = encodeURIComponent("Hola,\n\nEstoy interesado en conocer más sobre sus soluciones.");
+    
+            var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
+            var gmailWebLink = "https://mail.google.com/mail/?view=cm&fs=1&to=" + email + "&su=" + subject + "&body=" + body;
+            var gmailAppAndroid = "intent://compose?to=" + email + "&subject=" + subject + "&body=" + body + "#Intent;scheme=mailto;package=com.google.android.gm;end;";
+    
+            var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+            var isAndroid = /Android/i.test(navigator.userAgent);
+    
+            if (isAndroid) {
+                window.location.href = gmailAppAndroid;
+            } else if (isIOS) {
+                window.open(gmailWebLink, "_blank");
+            } else {
+                window.location.href = mailtoLink;
+            }
+    
+            setTimeout(function () {
+                if (confirm("¿No se abrió ningún cliente de correo? ¿Quieres abrir Gmail en su lugar?")) {
+                    window.open(gmailWebLink, "_blank");
+                }
+            }, 2000);
         });
 
         footerLinks.forEach(link => {

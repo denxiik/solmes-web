@@ -1046,7 +1046,6 @@ input:checked+.slider:before {
 
 /* Large devices (desktops, 992px and down) */
 @media (max-width: 992px) {
-
     /* -------------------------
        BUTTON
     ------------------------- */
@@ -1076,7 +1075,7 @@ input:checked+.slider:before {
     .home {
         width: 95%;
         margin: 0.5rem auto;
-        min-height: calc(90vh);
+        min-height: calc(50vh);
     }
 
     /* Main content (title + subtitle + button) */
@@ -1088,12 +1087,12 @@ input:checked+.slider:before {
     }
 
     .home .home-content .title {
-        font-size: 1.7rem;
+        font-size: 2rem;
         margin-bottom: 1rem;
     }
 
     .home .home-content .subtitle {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         margin-bottom: 2rem;
     }
 
@@ -1132,8 +1131,10 @@ input:checked+.slider:before {
     }
 
     .our-solutions-list .item {
-        width: 15rem;
+        flex: 1 1 30%;
+        max-width: 30%;
         height: 10rem;
+        margin: 1rem;
     }
 
     .our-solutions-list .item .title {
@@ -1143,12 +1144,14 @@ input:checked+.slider:before {
     /* -------------------------
         PARK4DIS SUCCES EXAMPLE SECTION
     ------------------------- */
-    .park4dis-succes-sample .content .title {
-        font-size: 1rem;
+    .park4dis-succes-sample {
+        display: flex;
+        flex-direction: column;
     }
 
-    .park4dis-succes-sample .content .subtitle {
-        font-size: 0.8rem;
+    .park4dis-succes-sample .content {
+        text-align: justify;
+        margin-top: -3rem;
     }
 
     /* -------------------------
@@ -1170,6 +1173,10 @@ input:checked+.slider:before {
     }
 
     /* biometry individual setting */
+    .our-tecnologies .list .biometry {
+        min-height: calc(25vh);
+    }
+
     .our-tecnologies .list .biometry .title {
         margin-top: 3rem;
     }
@@ -1206,6 +1213,11 @@ input:checked+.slider:before {
         width: 75%;
     }
 
+    .our-benefits-list .field .item .title {
+        font-size: 1.7rem;
+        height: 5rem;
+    }
+
     .our-benefits-list .field .item .subtitle {
         font-size: 1.2rem;
         height: 5rem;
@@ -1224,6 +1236,11 @@ input:checked+.slider:before {
         padding-left: 2%;
         line-height: 1.5;
         font-size: 1.8rem;
+    }
+
+    .our-solutions-list .item {
+        flex: 1 1 30%;
+        margin: 1rem;
     }
 
     .our-solutions-list .item .title {
