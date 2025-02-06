@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <title>Sustainable Mobility Page</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Hreflang tags (for SEO) -->
+    <link rel="alternate" hreflang="en" href="https://solmes.net/en/" />
+    <link rel="alternate" hreflang="es" href="https://solmes.net/es/" />
 </head>
 
 <body>
@@ -171,7 +175,7 @@
 
     <!-- PARK4DIS SUCCES EXAMPLE (park4dis-succes-sample) -->
     <section class="park4dis-succes-sample">
-        <img class="image" src="images/park4dis-succes-sample.png" alt="Screenshot on the Park4Dis web application">
+        <img class="image" src="../img/park4dis-succes-sample.png" alt="Screenshot on the Park4Dis web application">
 
         <div class="content">
             <h1 class="title">
@@ -196,7 +200,7 @@
 
     <!-- OUR CLIENTS (our-clients) -->
     <section class="our-clients">
-        <img class="image" src="images/our-clients.png" alt="Shields of the municipalities that are our clients">
+        <img class="image" src="../img/our-clients.png" alt="Shields of the municipalities that are our clients">
         <h1 class="title">
             Our Clients
         </h1>
@@ -251,7 +255,7 @@
 
             <div class="field">
                 <div class="api item">
-                    <img class="image" src="images/star.png" alt="Star">
+                    <img class="image" src="../img/star.png" alt="Star">
                     <h1 class="title">
                         API
                     </h1>
@@ -338,9 +342,9 @@
         </ul>
     </footer>
 
-    <button class="language-button" onclick="toggleLanguage()">
-        <img class="language-flag" src="images/en.webp" alt="English Flag"> </button>
-    <button id="floating-cookie-button"><i class="fas fa-cog"></i></button>
+    <a href="https://solmes.net/es/" class="language-button">
+        <img class="language-flag" src="../img/en.png" alt="English Flag">
+    </a>
 
     <section id="cookie-banner" style="display:none;">
         <p>We use a selection of our own and third-party cookies to improve your browsing experience, analyze
@@ -702,21 +706,6 @@
 
             });
         });
-
-        // Language settings
-        let currentLanguage = 'en';
-        function toggleLanguage() {
-            if (currentLanguage === 'en') {
-                currentLanguage = 'es';
-                document.querySelector('.language-flag').src = 'images/es.png';
-                window.location.href = 'index.html';
-            } else {
-                currentLanguage = 'en';
-                document.querySelector('.language-flag').src = 'images/en.png';
-                window.location.href = 'index_en.html';
-            }
-            localStorage.setItem('language', currentLanguage);
-        }
 
         // Cookies
         const cookieBanner = document.getElementById('cookie-banner');

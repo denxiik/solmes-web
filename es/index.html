@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <title>Página de Movilidad Sostenible</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Hreflang tags (for SEO) -->
+    <link rel="alternate" hreflang="en" href="https://solmes.net/en/" />
+    <link rel="alternate" hreflang="es" href="https://solmes.net/es/" />
 </head>
 
 <body>
@@ -181,7 +185,7 @@
     <!-- PARK4DIS SUCCES EXAMPLE (park4dis-succes-sample) -->
     <section class="park4dis-succes-sample">
         <!-- Image -->
-        <img class="image" src="images/park4dis-succes-sample.png"
+        <img class="image" src="../img/park4dis-succes-sample.png"
             alt="Captura de pantalla en la aplicacoin web de Park4Dis">
 
         <!-- Content -->
@@ -208,7 +212,7 @@
 
     <!-- OUR CLIENTS (our-clients) -->
     <section class="our-clients">
-        <img class="image" src="images/our-clients.png" alt="Escudos de los ayutamientos que son nuestros clientes">
+        <img class="image" src="../img/our-clients.png" alt="Escudos de los ayutamientos que son nuestros clientes">
         <h1 class="title">
             Nuestros Clientes
         </h1>
@@ -267,7 +271,7 @@
             <!-- Second field -->
             <div class="field">
                 <div class="api item">
-                    <img class="image" src="images/star.png" alt="Estrella">
+                    <img class="image" src="../img/star.png" alt="Estrella">
                     <h1 class="title">
                         API
                     </h1>
@@ -359,9 +363,9 @@
     </footer>
 
     <!-- Floating buttons -->
-    <button class="language-button" onclick="toggleLanguage()">
-        <img class="language-flag" src="images/es.png" alt="Spanish Flag"> </button>
-    <button id="floating-cookie-button"><i class="fas fa-cog"></i></button>
+    <a href="https://solmes.net/en/" class="language-button">
+        <img class="language-flag" src="../img/es.png" alt="Spanish Flag">
+    </a>
 
     <!-- Cookie banner -->
     <section id="cookie-banner" style="display:none;">
@@ -726,51 +730,6 @@
 
             });
         });
-
-        // Language settings
-        let currentLanguage = navigator.language || navigator.userLanguage || 'en';
-
-        function getLanguagePath(lang) {
-            if (lang.startsWith('es')) {
-                return 'index.html';
-            } else {
-                return 'index_en.html';
-            }
-        }
-
-        const storedLanguage = localStorage.getItem('language');
-
-        if (storedLanguage) {
-            currentLanguage = storedLanguage;
-            document.querySelector('.language-flag').src = `images/${currentLanguage.slice(0, 2)}.png`; // Update flag
-
-            const expectedPath = getLanguagePath(currentLanguage);
-            const currentPath = window.location.pathname;
-
-            if (!currentPath.endsWith(expectedPath)) {
-                window.location.href = expectedPath;
-            }
-        } else {
-            const expectedPath = getLanguagePath(currentLanguage);
-            const currentPath = window.location.pathname;
-            document.querySelector('.language-flag').src = `images/${currentLanguage.slice(0, 2)}.png`; // Update flag
-
-            if (!currentPath.endsWith(expectedPath)) {
-                window.location.href = expectedPath;
-            }
-        }
-
-        function toggleLanguage() {
-            if (currentLanguage.startsWith('en')) {
-                currentLanguage = 'es';
-            } else {
-                currentLanguage = 'en';
-            }
-
-            document.querySelector('.language-flag').src = `images/${currentLanguage.slice(0, 2)}.png`; // Update flag
-            localStorage.setItem('language', currentLanguage);  // Save the user's choice
-            window.location.href = getLanguagePath(currentLanguage);
-        }
 
         // Cookies
         const cookieBanner = document.getElementById('cookie-banner');

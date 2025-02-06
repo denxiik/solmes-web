@@ -1,6 +1,62 @@
 /* -------------------------
    BASIC RESET
 ------------------------- */
+@font-face {
+    font-family: 'Borna';
+    src: url('../fonts/Borna-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Borna';
+    src: url('../fonts/Borna-RegularItalic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Borna';
+    src: url('../fonts/Borna-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+font-family: 'Borna';
+src: url('../fonts/Borna-MediumItalic.otf') format('opentype');
+font-weight: 500;
+font-style: italic;
+}
+
+@font-face {
+font-family: 'Borna';
+src: url('../fonts/Borna-SemiBold.otf') format('opentype');
+font-weight: 600;
+font-style: normal;
+}
+
+@font-face {
+    font-family: 'Borna';
+    src: url('../fonts/Borna-SemiBoldItalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Borna';
+    src: url('../fonts/Borna-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Borna';
+    src: url('../fonts/Borna-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +64,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Borna';
     background-color: #fff;
     color: #333;
 }
@@ -319,7 +375,7 @@ input:checked+.slider:before {
     /* Gradient plus background image */
     background:
         linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
-        url("images/park4dis-app-sample.png") center/cover no-repeat;
+        url("../img/park4dis-app-sample.png") center/cover no-repeat;
 
     /* Container settings */
     width: 95%;
@@ -666,7 +722,7 @@ input:checked+.slider:before {
 
 /* labRa-sensors individual setting */
 .our-tecnologies .list .field .labRa-sensors {
-    background: url("images/lara-sensors.jpg") center/cover;
+    background: url("../img/lara-sensors.jpg") center/cover;
 }
 
 .our-tecnologies .list .field .labRa-sensors .title {
@@ -679,7 +735,7 @@ input:checked+.slider:before {
 
 /* inteligent-barrier individual setting */
 .our-tecnologies .list .field .inteligent-barrier {
-    background: url("images/inteligent-barrier.png") center/cover;
+    background: url("../img/inteligent-barrier.png") center/cover;
 }
 
 .our-tecnologies .list .field .inteligent-barrier .subtitle {
@@ -709,7 +765,7 @@ input:checked+.slider:before {
 
 /* bluetooth-tecnologie individual setting */
 .our-tecnologies .list .field .bluetooth-tecnologie {
-    background: url("images/bluetooth.jpg") right/cover;
+    background: url("../img/bluetooth.jpg") right/cover;
 }
 
 .our-tecnologies .list .field .bluetooth-tecnologie .title {
@@ -728,7 +784,7 @@ input:checked+.slider:before {
 
 /* biometry individual setting */
 .our-tecnologies .list .biometry {
-    background: url("images/biometry.png") right/cover;
+    background: url("../img/biometry.png") right/cover;
     min-height: calc(70vh);
     margin: 1rem;
     border-radius: 15px;
