@@ -722,7 +722,8 @@ input:checked+.slider:before {
 
 /* labRa-sensors individual setting */
 .our-tecnologies .list .field .labRa-sensors {
-    background: url("../img/lara-sensors.jpg") center/cover;
+    background-image: url("../img/lara-sensors.png");
+    background-position: bottom -12rem right -5rem;
 }
 
 .our-tecnologies .list .field .labRa-sensors .title {
@@ -735,11 +736,13 @@ input:checked+.slider:before {
 
 /* inteligent-barrier individual setting */
 .our-tecnologies .list .field .inteligent-barrier {
-    background: url("../img/inteligent-barrier.png") center/cover;
+    background-image: url("../img/inteligent-barrier.png");
+    background-position: center;
 }
 
 .our-tecnologies .list .field .inteligent-barrier .subtitle {
     margin-right: 7rem;
+    width: 50%;
 }
 
 /* api individual setting */
