@@ -309,6 +309,7 @@
 
     </section>
 
+    <!-- WISE HUMAN CITY (wise-human-city) -->
     <section class="wise-human-city">
         <div class="content">
             <h2 class="title">
@@ -322,6 +323,7 @@
         </div>
     </section>
 
+    <!--  (smart-wise-city) -->
     <section class="smart-wise-city">
         <div class="content">
             <h1 class="title">
@@ -332,6 +334,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <ul>
             <li><a href="#" class="active">Home</a></li>
@@ -342,12 +345,13 @@
         </ul>
     </footer>
 
+    <!-- Floating buttons -->
     <a href="https://solmes.net/es/" class="language-button">
         <img class="language-flag" src="../img/en.png" alt="English Flag">
     </a>
+    <button id="floating-cookie-button" aria-label="Settings"><i class="fas fa-cog"></i></button>
 
-    <button id="floating-cookie-button"><i class="fas fa-cog"></i></button>
-
+    <!-- Cookie banner -->
     <section id="cookie-banner" style="display:none;">
         <p>We use a selection of our own and third-party cookies to improve your browsing experience, analyze
             site traffic and personalize content: Technical Cookies: These cookies are necessary for the
@@ -365,6 +369,7 @@
         <button id="configure-cookies">Configure</button>
     </section>
 
+    <!-- Settings overlay -->
     <section id="settings-overlay">
         <div id="details-content">
             <span class="close-button" onclick="closeCookieDetails()"> &times;</span>
@@ -385,14 +390,13 @@
                     Leaving this cookie active allows us to improve our website.<br>
                 </p>
 
-                <label class="switch">
-                    <input type="checkbox" id="essentialCookies" checked disabled>
+                <label class="switch" for="essentialCookies"> <input type="checkbox" id="essentialCookies" checked
+                        disabled>
                     <span class="slider"></span>
                 </label>
                 <span class="switch-label">Essential cookies (Always active)</span><br>
 
-                <label class="switch">
-                    <input type="checkbox" id="analyticsCookies">
+                <label class="switch" for="analyticsCookies"> <input type="checkbox" id="analyticsCookies">
                     <span class="slider"></span>
                 </label>
                 <span class="switch-label">Google Analytics</span><br>
@@ -642,8 +646,9 @@
         </div>
     </section>
 
+
     <script>
-        // Temporary nuavailable nav-bar and footer
+        // Temporary unavailable nav-bar and footer
         const navLinks = document.querySelectorAll('nav a');
         const footerLinks = document.querySelectorAll('footer a');
         navLinks.forEach(link => {
@@ -668,14 +673,14 @@
             var email = "info@solmes.com";
             var subject = encodeURIComponent("Sales Inquiry");
             var body = encodeURIComponent("Hello,\n\nI am interested in learning more about your solutions.");
-        
+
             var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
             var gmailWebLink = "https://mail.google.com/mail/?view=cm&fs=1&to=" + email + "&su=" + subject + "&body=" + body;
             var gmailAppAndroid = "intent://compose?to=" + email + "&subject=" + subject + "&body=" + body + "#Intent;scheme=mailto;package=com.google.android.gm;end;";
-        
+
             var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
             var isAndroid = /Android/i.test(navigator.userAgent);
-        
+
             if (isAndroid) {
                 window.location.href = gmailAppAndroid;
             } else if (isIOS) {
@@ -683,7 +688,7 @@
             } else {
                 window.location.href = mailtoLink;
             }
-        
+
             setTimeout(function () {
                 if (confirm("No email client opened. Would you like to open Gmail instead?")) {
                     window.open(gmailWebLink, "_blank");
