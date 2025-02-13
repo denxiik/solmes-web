@@ -336,18 +336,18 @@
 
     <!-- Footer -->
     <footer>
-        <ul title="Available soon">
+        <ul title="Disponible Próximamente">
             <li><a href="#" class="active">Home</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Cities</a></li>
         </ul>
-    
-        <div class="button-group">  
-            <button id="legal-button">Legal Advice</button>
-            <button id="privacy-button">Privacy Policy</button>
-            <button id="cookie-button">Cookies</button>
+
+        <div class="button-group">
+            <span class="text-span" id="legal-advice">Legal Advice</span>
+            <span class="text-span" id="privacy-policy">Privacy Policy</span>
+            <span class="text-span" id="cookies">Cookies policy</span>
         </div>
     </footer>
 
@@ -746,9 +746,10 @@
         const learnMoreLink = document.getElementById('learn-more');
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
-        const floatingLegalButton = document.getElementById('floating-legal-button');
-        const floatingPrivacyButton = document.getElementById('floating-privacy-button');
+        const floatingLegalButton = document.getElementById('legal-advice');
+        const floatingPrivacyButton = document.getElementById('privacy-policy');
         const floatingCookieButton = document.getElementById('floating-cookie-button');
+        const cookieButton = document.getElementById('cookies');
 
         // Check localStorage *immediately*
         let consentCookie = localStorage.getItem('cookie_consent');
@@ -844,6 +845,10 @@
         });
 
         floatingCookieButton.addEventListener('click', () => {
+            openCookieDelay();
+        });
+
+        cookieButton.addEventListener('click', () => {
             openCookieDelay();
         });
     </script>

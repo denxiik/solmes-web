@@ -361,10 +361,10 @@
             <li><a href="#">Ciudades</a></li>
         </ul>
 
-        <div class="button-group"> 
-        <button id="legal-button">Aviso Legal</button>
-        <button id="privacy-button">Política de Privacidad</button>
-        <button id="cookie-button">Cookies</button>
+        <div class="button-group">
+            <span class="text-span" id="legal-advice">Aviso Legal</span>
+            <span class="text-span" id="privacy-policy">Política de Privacidad</span>
+            <span class="text-span" id="cookies">Política de Cookies</span>
         </div>
     </footer>
 
@@ -372,7 +372,7 @@
     <a href="https://solmes.net/en/" class="language-button">
         <img class="language-flag" src="../img/es.png" alt="Spanish Flag">
     </a>
-    <button id="floating-cookie-button"><i class="fas fa-cog"></i></button>
+    <button id="floating-cookie-button" aria-label="Ajustes"><i class="fas fa-cog"></i></button>
 
     <!-- Cookie banner -->
     <section id="cookie-banner" style="display:none;">
@@ -760,10 +760,10 @@
         const learnMoreLink = document.getElementById('learn-more');
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
-        const floatingLegalButton = document.getElementById('legal-button');
-        const floatingPrivacyButton = document.getElementById('privacy-button');
+        const floatingLegalButton = document.getElementById('legal-advice');
+        const floatingPrivacyButton = document.getElementById('privacy-policy');
         const floatingCookieButton = document.getElementById('floating-cookie-button');
-        const cookieButton = document.getElementById('cookie-button');
+        const cookieButton = document.getElementById('cookies');
 
 
         // Check localStorage *immediately*

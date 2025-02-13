@@ -23,17 +23,17 @@
 }
 
 @font-face {
-font-family: 'Borna';
-src: url('../fonts/Borna-MediumItalic.otf') format('opentype');
-font-weight: 500;
-font-style: italic;
+    font-family: 'Borna';
+    src: url('../fonts/Borna-MediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
 }
 
 @font-face {
-font-family: 'Borna';
-src: url('../fonts/Borna-SemiBold.otf') format('opentype');
-font-weight: 600;
-font-style: normal;
+    font-family: 'Borna';
+    src: url('../fonts/Borna-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
@@ -148,7 +148,7 @@ footer {
     font-weight: bold;
     z-index: 1;
     font-size: 0.8rem;
-    max-width: 70%;
+    max-width: 75%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -177,29 +177,30 @@ footer a.active {
     color: black;
 }
 
-footer button {
-    background-color: transparent;
+.text-span {
     color: white;
-    border: none;
+    font-weight: bold;
     padding: 0rem 0rem;
-    font-size: 1rem;
-    cursor: pointer; 
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    white-space: nowrap;
 }
 
-footer button + button::before {
+.text-span+.text-span::before {
     content: "|";
-    margin: 1rem 1rem;
+    margin: 0 0.5rem;
     color: white;
 }
 
 .button-group {
     display: flex;
-    align-items: center; 
-    margin-right: 0rem;
+    align-items: center;
+    margin-right: 1rem;
 }
 
-footer button:focus {
-    outline: none;
+.text-span:hover {
+    text-decoration: underline;
 }
 
 /* -------------------------
@@ -1142,6 +1143,7 @@ input:checked+.slider:before {
 
 /* Large devices (desktops, 992px and down) */
 @media (max-width: 992px) {
+
     /* -------------------------
        BUTTON
     ------------------------- */
@@ -1164,6 +1166,18 @@ input:checked+.slider:before {
     nav a {
         padding: 0.5rem 0.5rem;
     }
+
+    /* -------------------------
+   FOOTER
+------------------------- */
+    footer {
+        flex-direction: column;
+    }
+
+    footer ul {
+        padding-bottom: 1rem;
+    }
+
 
     /* -------------------------
        HOME SECTION
