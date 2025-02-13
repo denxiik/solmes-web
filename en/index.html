@@ -349,7 +349,9 @@
     <a href="https://solmes.net/es/" class="language-button">
         <img class="language-flag" src="../img/en.png" alt="English Flag">
     </a>
-    <button id="floating-cookie-button" aria-label="Settings"><i class="fas fa-cog"></i></button>
+    <button id="floating-legal-button">Legal Advice</button>
+    <button id="floating-privacy-button">Privacy Policy</button>
+    <button id="floating-cookie-button">Cookies</button>
 
     <!-- Cookie banner -->
     <section id="cookie-banner" style="display:none;">
@@ -369,97 +371,12 @@
         <button id="configure-cookies">Configure</button>
     </section>
 
-    <!-- Settings overlay -->
-    <section id="settings-overlay">
+    <!-- Settings overlays -->
+    <section id="legal-overlay" class="overlay">
         <div id="details-content">
-            <span class="close-button" onclick="closeCookieDetails()"> &times;</span>
+            <span class="close-button" onclick="closeLegalDelay()"> &times;</span>
 
-            <div class="tab-buttons">
-                <button class="tab-button active" data-tab="legal-advise">Legal Notice</button>
-                <button class="tab-button" data-tab="privacy-policy">Privacy Policy</button>
-                <button class="tab-button" data-tab="cookie-policy">Cookies policy</button>
-                <button class="tab-button" data-tab="cookie-settings">Third-party cookies</button>
-            </div>
-
-            <div id="cookie-settings" class="tab-content active">
-                <h2>Third-party cookies</h2>
-                <p>
-                    This website uses Google Analytics to collect anonymous information such as the number of
-                    site visitors, or the most popular pages.
-                    <br><br>
-                    Leaving this cookie active allows us to improve our website.<br>
-                </p>
-
-                <label class="switch" for="essentialCookies"> <input type="checkbox" id="essentialCookies" checked
-                        disabled>
-                    <span class="slider"></span>
-                </label>
-                <span class="switch-label">Essential cookies (Always active)</span><br>
-
-                <label class="switch" for="analyticsCookies"> <input type="checkbox" id="analyticsCookies">
-                    <span class="slider"></span>
-                </label>
-                <span class="switch-label">Google Analytics</span><br>
-
-                <br>
-                <button id="save-cookie-settings">Save changes</button>
-            </div>
-
-            <div id="cookie-policy" class="tab-content">
-                <h2>Cookies policy</h2>
-                <p>What are cookies?
-                    <br><br>
-                    Cookies are small text files, which are automatically inserted into
-                    those telematic devices used by the user when visiting the website.
-                    These downloaded files can store data that can be updated and retrieved by
-                    the entity responsible for their installation. These files allow us to know, for statistical
-                    purposes,
-                    to improve the service and adapt it to your preferences, what is your behavior when browsing
-                    the web.
-                    <br><br>
-                    Classification of cookies:<br><br>
-                </p>
-                <ul id="cookie-details-list">
-                    <li><strong>OWN COOKIES:</strong>Own cookies are cookies created and managed
-                        directly by the company that manages the website. These cookies are sent directly
-                        to the user's terminal equipment from a computer or domain managed by the website editor
-                        itself:<br><br>
-                    </li>
-                    <li><strong>Technical cookies:</strong>These are those that allow the user to navigate through
-                        the restricted area and the use of its different functions, such as, for example, carrying out
-                        the process of purchasing an item.<br><br>
-                    </li>
-                    <li><strong>THIRD-PARTY COOKIES:</strong>Cookies that are installed by a website that is not the one
-                        you are
-                        visiting right now:<br><br>
-                    </li>
-                    <li><strong>Advertising cookies:</strong>These are those that, whether processed by this website or
-                        by
-                        third parties, allow managing in the most effective way possible the offer of advertising spaces
-                        that are on the website, adapting the content of the advertisement to the content of the
-                        service requested or the use you make of our website. For this we can analyze your
-                        Internet browsing habits and we can show you advertising related to your browsing profile.
-                        <br><br>
-                    </li>
-                    <li><strong>Behavioral advertising cookies:</strong>These are those that allow the management, in
-                        the most effective way possible, of advertising spaces that, where appropriate, the editor has
-                        included in a website, application or platform from which the requested service is provided.
-                        This type of cookies store information on the behavior of visitors obtained through
-                        continuous observation of their browsing habits, which allows developing a
-                        specific profile to display advertisements based on it.<br><br>
-                    </li>
-                    <li><strong>Security cookies:</strong>They are responsible for authenticating users and preventing
-                        the fraudulent use
-                        of credentials by third parties.<br><br>
-                    </li>
-                    <li><strong>Functionality cookies:</strong>They are used to provide services or remember settings
-                        that improve
-                        the User experience.<br><br>
-                    </li>
-                </ul>
-            </div>
-
-            <div id="legal-advise" class="tab-content">
+            <div id="legal-advise" class="tab-content active">
                 <h2>Legal Notice</h2>
 
                 <h3><br>Identification of the website owner</h3>
@@ -562,7 +479,14 @@
                 <p><br>Last updated: January 2024</p>
             </div>
 
-            <div id="privacy-policy" class="tab-content">
+        </div>
+    </section>
+
+    <section id="privacy-overlay" class="overlay">
+        <div id="details-content">
+            <span class="close-button" onclick="closePrivacyOverlay()"> &times;</span>
+
+            <div id="privacy-policy" class="tab-content active">
                 <h2>Privacy Policy</h2>
 
                 <h3><br>DATA CONTROLLER</h3>
@@ -646,6 +570,97 @@
         </div>
     </section>
 
+    <section id="cookies-overlay" class="overlay">
+        <div id="details-content">
+            <!-- Buttons -->
+            <span class="close-button" onclick="closeCookieOverlay()"> &times;</span>
+
+            <div class="tab-buttons">
+                <button class="tab-button" data-tab="cookie-policy">Cookies policy</button>
+                <button class="tab-button" data-tab="cookie-settings">Third-party cookies</button>
+            </div>
+
+            <div id="cookie-settings" class="tab-content active">
+                <h2>Third-party cookies</h2>
+                <p>
+                    This website uses Google Analytics to collect anonymous information such as the number of
+                    site visitors, or the most popular pages.
+                    <br><br>
+                    Leaving this cookie active allows us to improve our website.<br>
+                </p>
+
+                <label class="switch" for="essentialCookies"> <input type="checkbox" id="essentialCookies" checked
+                        disabled>
+                    <span class="slider"></span>
+                </label>
+                <span class="switch-label">Essential cookies (Always active)</span><br>
+
+                <label class="switch" for="analyticsCookies"> <input type="checkbox" id="analyticsCookies">
+                    <span class="slider"></span>
+                </label>
+                <span class="switch-label">Google Analytics</span><br>
+
+                <br>
+                <button id="save-cookie-settings">Save changes</button>
+            </div>
+
+            <div id="cookie-policy" class="tab-content">
+                <h2>Cookies policy</h2>
+                <p>What are cookies?
+                    <br><br>
+                    Cookies are small text files, which are automatically inserted into
+                    those telematic devices used by the user when visiting the website.
+                    These downloaded files can store data that can be updated and retrieved by
+                    the entity responsible for their installation. These files allow us to know, for statistical
+                    purposes,
+                    to improve the service and adapt it to your preferences, what is your behavior when browsing
+                    the web.
+                    <br><br>
+                    Classification of cookies:<br><br>
+                </p>
+                <ul id="cookie-details-list">
+                    <li><strong>OWN COOKIES:</strong>Own cookies are cookies created and managed
+                        directly by the company that manages the website. These cookies are sent directly
+                        to the user's terminal equipment from a computer or domain managed by the website editor
+                        itself:<br><br>
+                    </li>
+                    <li><strong>Technical cookies:</strong>These are those that allow the user to navigate through
+                        the restricted area and the use of its different functions, such as, for example, carrying out
+                        the process of purchasing an item.<br><br>
+                    </li>
+                    <li><strong>THIRD-PARTY COOKIES:</strong>Cookies that are installed by a website that is not the one
+                        you are
+                        visiting right now:<br><br>
+                    </li>
+                    <li><strong>Advertising cookies:</strong>These are those that, whether processed by this website or
+                        by
+                        third parties, allow managing in the most effective way possible the offer of advertising spaces
+                        that are on the website, adapting the content of the advertisement to the content of the
+                        service requested or the use you make of our website. For this we can analyze your
+                        Internet browsing habits and we can show you advertising related to your browsing profile.
+                        <br><br>
+                    </li>
+                    <li><strong>Behavioral advertising cookies:</strong>These are those that allow the management, in
+                        the most effective way possible, of advertising spaces that, where appropriate, the editor has
+                        included in a website, application or platform from which the requested service is provided.
+                        This type of cookies store information on the behavior of visitors obtained through
+                        continuous observation of their browsing habits, which allows developing a
+                        specific profile to display advertisements based on it.<br><br>
+                    </li>
+                    <li><strong>Security cookies:</strong>They are responsible for authenticating users and preventing
+                        the fraudulent use
+                        of credentials by third parties.<br><br>
+                    </li>
+                    <li><strong>Functionality cookies:</strong>They are used to provide services or remember settings
+                        that improve
+                        the User experience.<br><br>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
 
     <script>
         // Temporary unavailable nav-bar and footer
@@ -714,18 +729,21 @@
             });
         });
 
-        // Cookies
         const cookieBanner = document.getElementById('cookie-banner');
         const acceptButton = document.getElementById('accept-cookies');
         const declineButton = document.getElementById('decline-cookies');
         const configureButton = document.getElementById('configure-cookies');
-        const cookieDetailsOverlay = document.getElementById('settings-overlay');
+        const legalOverlay = document.getElementById('legal-overlay');
+        const privacyOverlay = document.getElementById('privacy-overlay');
+        const cookiesOverlay = document.getElementById('cookies-overlay');
         const analyticsCheckbox = document.getElementById('analyticsCookies');
         const marketingCheckbox = document.getElementById('marketingCookies');
         const saveButton = document.getElementById('save-cookie-settings');
         const learnMoreLink = document.getElementById('learn-more');
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
+        const floatingLegalButton = document.getElementById('floating-legal-button');
+        const floatingPrivacyButton = document.getElementById('floating-privacy-button');
         const floatingCookieButton = document.getElementById('floating-cookie-button');
 
         // Check localStorage *immediately*
@@ -736,7 +754,6 @@
         } else {
             cookieBanner.style.display = 'none';
         }
-
 
         acceptButton.addEventListener('click', () => {
             localStorage.setItem('cookie_consent', '{"analytics": "true"}');
@@ -759,16 +776,24 @@
 
             localStorage.setItem('cookie_consent', JSON.stringify(cookie_settings));
 
-            closeCookieDetails();
+            closeCookieOverlay();
         });
 
         learnMoreLink.addEventListener('click', (event) => {
             event.preventDefault();
-            cookieDetailsOverlay.style.display = 'block';
+            cookiesOverlay.style.display = 'block';
         });
 
+        function openLegalDelay() {
+            legalOverlay.style.display = 'block';
+        }
+
+        function openPrivacyDelay() {
+            privacyOverlay.style.display = 'block';
+        }
+
         function openCookieDelay() {
-            cookieDetailsOverlay.style.display = 'block';
+            cookiesOverlay.style.display = 'block';
             let consentCookie = localStorage.getItem('cookie_consent');
             if (consentCookie !== null) {
                 let cookie_settings = JSON.parse(consentCookie);
@@ -776,13 +801,21 @@
             }
         }
 
-        function closeCookieDetails() {
-            cookieDetailsOverlay.style.display = 'none';
+        function closeLegalDelay() {
+            legalOverlay.style.display = 'none';
         }
 
-        cookieDetailsOverlay.addEventListener('click', (event) => {
-            if (event.target === cookieDetailsOverlay) {
-                closeCookieDetails();
+        function closePrivacyOverlay() {
+            privacyOverlay.style.display = 'none';
+        }
+
+        function closeCookieOverlay() {
+            cookiesOverlay.style.display = 'none';
+        }
+
+        cookiesOverlay.addEventListener('click', (event) => {
+            if (event.target === cookiesOverlay) {
+                closeCookieOverlay();
             }
         });
 
@@ -796,6 +829,14 @@
                 tabContents.forEach(content => content.classList.remove('active'));
                 document.getElementById(tabId).classList.add('active');
             });
+        });
+
+        floatingLegalButton.addEventListener('click', () => {
+            openLegalDelay();
+        });
+
+        floatingPrivacyButton.addEventListener('click', () => {
+            openPrivacyDelay();
         });
 
         floatingCookieButton.addEventListener('click', () => {

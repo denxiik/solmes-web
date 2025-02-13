@@ -175,7 +175,7 @@ footer a.active {
 }
 
 /* -------------------------
-   COOKIE
+   Overlays
 ------------------------- */
 /* Basic styling for the cookie banner */
 #cookie-banner {
@@ -196,7 +196,7 @@ footer a.active {
     font-size: 1.2rem;
 }
 
-#settings-overlay {
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -208,7 +208,7 @@ footer a.active {
     overflow-y: auto;
 }
 
-#settings-overlay .close-button {
+.overlay .close-button {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -336,8 +336,10 @@ input:checked+.slider:before {
 }
 
 /* -------------------------
-   Floating button
+   Floating buttons
 ------------------------- */
+#floating-legal-button,
+#floating-privacy-button,
 #floating-cookie-button {
     position: fixed;
     left: 20px;
@@ -347,8 +349,17 @@ input:checked+.slider:before {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
     z-index: 999;
+}
+
+#floating-legal-button {
+    margin-bottom: 6rem;
+}
+
+#floating-privacy-button {
+    margin-bottom: 3rem;
 }
 
 .language-button {
