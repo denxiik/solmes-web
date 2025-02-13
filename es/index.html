@@ -352,28 +352,28 @@
     </section>
 
     <!-- Footer -->
-    <footer title="Disponible Próximamente">
-        <ul>
+    <footer>
+        <ul title="Disponible Próximamente">
             <li><a href="#" class="active">Inicio</a></li>
             <li><a href="#">Contacto</a></li>
             <li><a href="#">Nosotros</a></li>
             <li><a href="#">Servicios</a></li>
             <li><a href="#">Ciudades</a></li>
         </ul>
+
+        <div class="button-group"> 
+        <button id="legal-button">Aviso Legal</button>
+        <button id="privacy-button">Política de Privacidad</button>
+        <button id="cookie-button">Cookies</button>
+        </div>
     </footer>
 
     <!-- Floating buttons -->
     <a href="https://solmes.net/en/" class="language-button">
         <img class="language-flag" src="../img/es.png" alt="Spanish Flag">
     </a>
-    <div class="floating-button-container">
-        <button id="main-floating-button" aria-label="Settings"><i class="fas fa-cog"></i></button>
-        <div class="sub-floating-buttons">
-            <button id="floating-legal-button">Aviso Legal</button>
-            <button id="floating-privacy-button">Política de Privacidad</button>
-            <button id="floating-cookie-button">Cookies</button>
-        </div>
-    </div>
+    <button id="floating-cookie-button"><i class="fas fa-cog"></i></button>
+
     <!-- Cookie banner -->
     <section id="cookie-banner" style="display:none;">
         <p>Utilizamos una selección de cookies propias y de terceros para mejorar su experiencia de navegación, analizar
@@ -760,9 +760,10 @@
         const learnMoreLink = document.getElementById('learn-more');
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
-        const floatingLegalButton = document.getElementById('floating-legal-button');
-        const floatingPrivacyButton = document.getElementById('floating-privacy-button');
+        const floatingLegalButton = document.getElementById('legal-button');
+        const floatingPrivacyButton = document.getElementById('privacy-button');
         const floatingCookieButton = document.getElementById('floating-cookie-button');
+        const cookieButton = document.getElementById('cookie-button');
 
 
         // Check localStorage *immediately*
@@ -860,6 +861,10 @@
         });
 
         floatingCookieButton.addEventListener('click', () => {
+            openCookieDelay();
+        });
+
+        cookieButton.addEventListener('click', () => {
             openCookieDelay();
         });
     </script>

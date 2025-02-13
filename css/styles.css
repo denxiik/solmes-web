@@ -148,7 +148,10 @@ footer {
     font-weight: bold;
     z-index: 1;
     font-size: 0.8rem;
-    max-width: 15%;
+    max-width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 footer ul {
@@ -172,6 +175,31 @@ footer a.active {
 
 footer a.active {
     color: black;
+}
+
+footer button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 0rem 0rem;
+    font-size: 1rem;
+    cursor: pointer; 
+}
+
+footer button + button::before {
+    content: "|";
+    margin: 1rem 1rem;
+    color: white;
+}
+
+.button-group {
+    display: flex;
+    align-items: center; 
+    margin-right: 0rem;
+}
+
+footer button:focus {
+    outline: none;
 }
 
 /* -------------------------
@@ -338,60 +366,27 @@ input:checked+.slider:before {
 /* -------------------------
    Floating buttons
 ------------------------- */
-.floating-button-container {
+#floating-cookie-button {
     position: fixed;
-    bottom: 20px;
     left: 20px;
-    z-index: 1000;
-}
-
-.floating-button-container:hover .sub-floating-buttons {
-    display: flex;
-}
-
-.floating-button-container:hover #main-floating-button {
-    display: none;
-}
-
-.sub-floating-buttons {
-    display: none;
-    flex-direction: column;
-    margin-top: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 25px;
-    padding: 5px;
-}
-
-.sub-floating-buttons button {
-    margin-bottom: 5px; 
-    background-color: transparent;
-    color: white;
-    border: none;
-    padding: 8px 12px; 
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 1rem;
-    width: 100%;
-    text-align: left;
-}
-.sub-floating-buttons button:hover{
+    bottom: 20px;
     background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* Style the main floating button */
-#main-floating-button {
-    background-color: rgba(0, 0, 0, 0.3);
     color: white;
     padding: 10px 15px;
     border: none;
-    border-radius: 25px;
+    border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-}
-#main-floating-button:hover{
-    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
 }
 
+#floating-legal-button {
+    margin-bottom: 6rem;
+}
+
+#floating-privacy-button {
+    margin-bottom: 3rem;
+}
 
 .language-button {
     position: fixed;
