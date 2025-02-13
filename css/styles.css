@@ -95,45 +95,69 @@ button {
 }
 
 /* -------------------------
+   HEADER STYLES
+------------------------- */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Logo styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+/* -------------------------
    NAV BAR
 ------------------------- */
-nav {
-    position: absolute;
-    top: 3rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    backdrop-filter: blur(10px);
-    padding: 0.6rem 0rem;
-    border-radius: 999px;
-    font-weight: bold;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-}
-
-nav ul {
+.nav-bar {
     display: flex;
-    gap: 1rem;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 2rem;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-nav a {
+.nav-bar a {
     text-decoration: none;
-    color: #807f7f;
     font-weight: bold;
-    padding: 0.6rem 0.9rem;
+    color: #333;
+    padding: 0.6rem 1rem;
     border-radius: 999px;
+    transition: background-color 0.3s ease;
 }
 
-nav a:hover,
-nav a.active {
-    background-color: #ffffff;
-    color: black;
+.nav-bar a:hover,
+.nav-bar a.active {
+    background-color: #013199;
+    color: white;
 }
 
-nav a.active {
-    color: rgb(0, 209, 0);
-    font-weight: bold;
+/* Mobile Menu Button (Hidden by default) */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 /* -------------------------
@@ -167,14 +191,14 @@ footer a {
     border-radius: 999px;
 }
 
-footer a:hover,
-footer a.active {
-    background-color: #9ee870;
-    color: black;
+footer a:hover {
+    background-color: white;
+    color: darkblue;
 }
 
 footer a.active {
     color: black;
+    background-color: #9ee870;
 }
 
 .text-span {
@@ -206,6 +230,121 @@ footer a.active {
 /* -------------------------
    Overlays
 ------------------------- */
+/* FEDER FUNDING SECTION */
+#feder-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+#feder-overlay #details-content {
+    background: #ffffff;
+    max-width: 800px;
+    width: 90%;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+#feder-overlay .feder-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#feder-overlay .close-button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    background-color: #013199;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#feder-overlay .close-button:hover {
+    color: rgb(0, 209, 0);
+}
+
+#feder-funding .title {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05rem;
+}
+
+#feder-funding .subtitle {
+    font-size: 1.8rem;
+    color: #34495e;
+    margin-top: 2rem;
+}
+
+#feder-funding .highlight {
+    background-color: #ffecb3;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+#feder-funding .solutions-list {
+    list-style: none;
+    padding: 0;
+}
+
+#feder-funding .solutions-list li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#feder-funding .contact-button {
+    display: inline-block;
+    padding: 15px 25px;
+    margin-top: 20px;
+    background-color: rgb(0, 209, 0);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#feder-funding .contact-button:hover {
+    background-color: rgb(0, 209, 0);
+}
+
+#feder-funding .cta {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#feder-funding .source {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+#feder-funding .source a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+#feder-funding p {
+    text-align: justify;
+}
+
 /* Basic styling for the cookie banner */
 #cookie-banner {
     position: fixed;
@@ -456,8 +595,8 @@ input:checked+.slider:before {
 /* Stats card in the bottom-right corner */
 .home-stats-card {
     position: absolute;
-    bottom: 0rem;
-    right: 0rem;
+    bottom: 0;
+    right: 0;
     background-color: rgba(237, 239, 252, 1);
     color: #333;
 
@@ -467,11 +606,16 @@ input:checked+.slider:before {
     border-bottom-left-radius: 0;
 
     /* Increase padding for a larger card */
-    padding: 2rem 3rem;
+    padding: 2rem 0.5rem;
     gap: 2rem;
     display: flex;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.home-stats-card .stat {
+    text-align: center;
+    flex: 1;
 }
 
 .home-stats-card .stat h2 {
@@ -496,8 +640,8 @@ input:checked+.slider:before {
 
 /* Main text (title and subtitle) */
 .our-benefits-name {
-    padding-left: 8%;
-    padding-top: 15%;
+    padding-left: 5rem;
+    padding-top: 12rem;
     width: 50%;
 }
 
@@ -510,15 +654,14 @@ input:checked+.slider:before {
     font-weight: lighter;
     color: #626964;
     font-size: 1.3rem;
-    margin-bottom: 3rem;
 }
 
 /* List of benefits (right part of 2x2 grid benefits) */
 .our-benefits-list {
     width: 65%;
-    padding-top: 10%;
-    padding-left: 7%;
-    padding-right: 5%;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     display: block;
 }
 
@@ -528,7 +671,7 @@ input:checked+.slider:before {
 
 .our-benefits-list .field .item {
     background-color: #e0eafe;
-    margin: 2%;
+    margin: 1rem;
     width: 100%;
     height: 100%;
     border-radius: 15px;
@@ -696,47 +839,49 @@ input:checked+.slider:before {
 
 /* Main text (title and subtitle) */
 .our-tecnologies .content {
-    position: relative;
     text-align: center;
-    top: 5rem;
-    left: 50%;
-    transform: translate(-50%, -0%);
+    padding: 3rem;
 }
 
 .our-tecnologies .content .title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #76dd35;
 }
 
 .our-tecnologies .content .subtitle {
     font-size: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     color: #f2f3f6;
 }
 
 /* List of tecnologies */
 /* General settings */
 .our-tecnologies .list {
-    margin-top: 8%;
-    text-align: left;
-    margin-left: 10%;
-    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 80%;
+    margin: auto;
 }
 
 .our-tecnologies .list .field {
     display: flex;
+    gap: 2rem;
+    width: 100%;
 }
 
 .our-tecnologies .list .field .item {
-    margin: 2%;
     width: 100%;
     height: 30rem;
     border-radius: 15px;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .our-tecnologies .list .field .item .title {
-    margin-top: 3rem;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1rem;
 }
 
 .our-tecnologies .list .field .item .title,
@@ -746,8 +891,9 @@ input:checked+.slider:before {
 }
 
 .our-tecnologies .list .field .item .subtitle {
-    margin-top: 2rem;
-    margin-right: 6rem;
+    font-size: 1.2rem;
+    color: #cddaf8;
+    line-height: 1.5;
 }
 
 .our-tecnologies .list .field .item .subtitle,
@@ -758,28 +904,39 @@ input:checked+.slider:before {
     font-weight: lighter;
 }
 
-/* labRa-sensors individual setting */
+/* LabRa Sensors individual setting */
 .our-tecnologies .list .field .labRa-sensors {
     background-image: url("../img/lara-sensors.png");
-    background-position: bottom -12rem right -5rem;
+    background-repeat: no-repeat;
+    background-position: bottom calc(-12rem) right calc(-5rem);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
-.our-tecnologies .list .field .labRa-sensors .title {
+.our-tecnologies .list .field .labRa-sensors .title,
+.our-tecnologies .list .field .inteligent-barrier .title {
     color: black;
 }
 
 .our-tecnologies .list .field .labRa-sensors .subtitle {
     color: #2c429f;
+    width: 75%;
 }
 
 /* inteligent-barrier individual setting */
 .our-tecnologies .list .field .inteligent-barrier {
     background-image: url("../img/inteligent-barrier.png");
+    background-repeat: no-repeat;
     background-position: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .our-tecnologies .list .field .inteligent-barrier .subtitle {
-    margin-right: 7rem;
     width: 50%;
 }
 
@@ -794,10 +951,6 @@ input:checked+.slider:before {
     height: 2rem;
 }
 
-.our-tecnologies .list .field .api .subtitle {
-    margin-right: 2%;
-}
-
 .our-tecnologies .list .field .api .more {
     margin-top: 2rem;
     color: #8ad66b;
@@ -809,46 +962,34 @@ input:checked+.slider:before {
     background: url("../img/bluetooth.jpg") right/cover;
 }
 
-.our-tecnologies .list .field .bluetooth-tecnologie .title {
-    margin-top: 1rem;
-    margin-bottom: 2%;
-}
-
 .our-tecnologies .list .field .bluetooth-tecnologie .more {
     color: #3399ff;
     font-size: 1rem;
 }
 
 .our-tecnologies .list .field .bluetooth-tecnologie .subtitle {
-    width: 15rem;
+    width: 50%;
 }
 
 /* biometry individual setting */
 .our-tecnologies .list .biometry {
     background: url("../img/biometry.png") right/cover;
     min-height: calc(70vh);
-    margin: 1rem;
     border-radius: 15px;
     display: block;
 }
 
-.our-tecnologies .list .biometry .title,
-.our-tecnologies .list .biometry .subtitle {
-    margin-left: 2rem;
-}
-
 .our-tecnologies .list .biometry .title {
     color: black;
-    padding-top: 5rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
 }
 
 .our-tecnologies .list .biometry .subtitle {
-    position: relative;
-    width: 28rem;
-    padding-top: 1rem;
-
+    width: 40%;
     font-weight: bold;
     color: #808c95;
+    padding-left: 2rem;
 }
 
 /* -------------------------
@@ -881,7 +1022,7 @@ input:checked+.slider:before {
 .wise-human-city .content .button {
     border-radius: 5px;
     font-size: 1rem;
-    padding: 0.7rem 0.7rem;
+    padding: 0.7rem;
 }
 
 /* -------------------------
@@ -901,12 +1042,19 @@ input:checked+.slider:before {
 }
 
 .smart-wise-city .content .title {
-    padding-top: 5rem;
+    padding: 3rem;
     color: white;
     font-size: 3rem;
     line-height: 2;
-    margin-bottom: 1rem;
-    letter-spacing: 0.1rem;
+}
+
+#emailButton {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#emailButton:hover {
+    background-color: #fff;
+    color: #013199;
 }
 
 /* Simple responsive fix (example for smaller screens) */
@@ -957,10 +1105,6 @@ input:checked+.slider:before {
     /* -------------------------
         OUR BENEFITS SECTIONS
     ------------------------- */
-    .our-benefits-list {
-        padding-top: 0%;
-    }
-
     .our-benefits-list .field .item .title {
         margin-top: 1rem;
     }
@@ -978,20 +1122,6 @@ input:checked+.slider:before {
     }
 
     /* -------------------------
-        OUR SOLUTIONS SECTIONS
-    ------------------------- */
-    .our-solution {
-        flex-direction: column;
-    }
-
-    .our-solution .subtitle {
-        margin-top: 1rem;
-        width: 100%;
-        padding-left: 10%;
-        font-size: 1.5rem;
-    }
-
-    /* -------------------------
         OUR CLIENTS SECTION
     ------------------------- */
     .our-clients .title {
@@ -999,35 +1129,8 @@ input:checked+.slider:before {
     }
 
     /* -------------------------
-        OUR TECNOLOGIES SECTION
-    ------------------------- */
-    /* List of tecnologies */
-    .our-tecnologies .list {
-        padding-top: 10%;
-        margin-left: 2%;
-        margin-right: 2%;
-    }
-
-    .our-tecnologies .list .field .item {
-        margin: 1%;
-        width: 100%;
-        height: 15rem;
-    }
-
-    /* biometry individual setting */
-    .our-tecnologies .list .biometry {
-        min-height: calc(30vh);
-        margin-left: 1%;
-        margin-right: 1%;
-    }
-
-    /* -------------------------
         SMART WISE CITY SECTION
     ------------------------- */
-    .smart-wise-city .content {
-        padding-bottom: 10rem;
-    }
-
     .smart-wise-city .content .title {
         font-size: 2rem;
         line-height: 1.5;
@@ -1036,6 +1139,56 @@ input:checked+.slider:before {
 
 /* Small devices (phones, 768px and down) */
 @media (max-width: 768px) {
+    /* Nav bar */
+    .nav-bar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-bar ul {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        list-style: none;
+    }
+
+    .nav-bar a {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.2rem;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    /* Hover effect for mobile */
+    .nav-bar a:hover {
+        background-color: rgba(1, 49, 153, 0.1);
+    }
+    
+    /* Active menu state */
+    .nav-bar.active {
+        display: block;
+    }
+    
+    /* Active link inside the mobile menu */
+    .nav-bar.active a.active {
+        background-color: #013199;
+        color: white;
+        font-weight: bold;
+    }
+    
+    /* Mobile menu toggle button */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
 
     /* -------------------------
         OUR BENEFITS SECTIONS
@@ -1046,14 +1199,23 @@ input:checked+.slider:before {
     }
 
     .our-benefits-name {
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-top: 0;
+        padding-left: 2rem;
+        padding-right: 2rem;
         width: 100%;
+        text-align: center;
     }
 
     .our-benefits-list {
         width: 100%;
-        padding-left: 5%;
+        padding-top: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+
+    .our-benefits-list .field .item {
+        margin: 0.5rem;
     }
 
     .our-benefits-list .field .item .subtitle {
@@ -1065,12 +1227,19 @@ input:checked+.slider:before {
         OUR SOLUTIONS SECTIONS
     ------------------------- */
     .our-solution {
-        margin-right: 5%;
-        align-items: center;
+        flex-direction: column;
     }
 
     .our-solution .title {
-        margin-left: 0%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .our-solution .subtitle {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        text-align: center;
     }
 
     .our-solutions-list .item {
@@ -1078,72 +1247,70 @@ input:checked+.slider:before {
     }
 
     .our-solutions-list .item .title {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     /* -------------------------
         PARK4DIS SUCCES EXAMPLE SECTION
     ------------------------- */
     .park4dis-succes-sample .content {
-        max-width: 35%;
+        max-width: 30%;
         top: 40%;
     }
 
     .park4dis-succes-sample .content .title {
-        font-size: 1rem;
+        font-size: flex;
         margin-bottom: 0%;
     }
 
     .park4dis-succes-sample .content .subtitle {
         visibility: collapse;
-        margin-bottom: 0%;
-        font-size: 0rem;
+        font-size: 0;
     }
 
     .park4dis-succes-sample .content .more {
         position: absolute;
-        top: 2rem;
     }
 
     /* -------------------------
         OUR CLIENTS SECTION
     ------------------------- */
     .our-clients .title {
-        font-size: 1.5rem;
+        font-size: flex;
     }
 
     /* -------------------------
         OUR TECNOLOGIES SECTION
     ------------------------- */
     /* List of tecnologies */
-    .our-tecnologies .list {
-        margin-top: 15%;
+    .our-tecnologies .list .field {
+        flex-direction: column;
     }
 
-    .our-tecnologies .list .field .item .title,
-    .our-tecnologies .list .field .title {
-        font-size: 2rem;
+    .our-tecnologies .list .field .item {
+        width: 100%;
     }
 
-    .our-tecnologies .list .field .item .subtitle,
-    .our-tecnologies .list .field .subtitle {
-        display: none;
+    .our-tecnologies .list .field .api {
+        height: fit-content;
     }
 
-    /* api individual setting */
-    .our-tecnologies .list .field .api .title {
-        margin-top: 1rem;
+    .our-tecnologies .list .field .bluetooth-tecnologie {
+        height: fit-content;
+    }
+    
+    .our-tecnologies .list .biometry {
+        background-position: center;
+        padding-bottom: 2rem;
     }
 
-    .our-tecnologies .list .field .api .more {
-        margin-top: 1rem;
-        margin-top: 2%;
+    .our-tecnologies .list .biometry .subtitle {
+        width: 60%;
     }
 }
 
 /* Large devices (desktops, 992px and down) */
 @media (max-width: 992px) {
-
     /* -------------------------
        BUTTON
     ------------------------- */
@@ -1153,23 +1320,8 @@ input:checked+.slider:before {
     }
 
     /* -------------------------
-       NAV BAR
+        FOOTER
     ------------------------- */
-    nav {
-        top: 2rem;
-    }
-
-    nav ul {
-        gap: 0rem;
-    }
-
-    nav a {
-        padding: 0.5rem 0.5rem;
-    }
-
-    /* -------------------------
-   FOOTER
-------------------------- */
     footer {
         flex-direction: column;
     }
@@ -1177,7 +1329,6 @@ input:checked+.slider:before {
     footer ul {
         padding-bottom: 1rem;
     }
-
 
     /* -------------------------
        HOME SECTION
@@ -1214,7 +1365,8 @@ input:checked+.slider:before {
         OUR BENEFITS SECTIONS
     ------------------------- */
     .our-benefits-name {
-        width: 50%;
+        width: auto;
+        padding-top: 2rem;
     }
 
     .our-benefits-name .title {
@@ -1243,12 +1395,12 @@ input:checked+.slider:before {
     .our-solutions-list .item {
         flex: 1 1 30%;
         max-width: 30%;
-        height: 10rem;
-        margin: 1rem;
+        min-height: 100px;
+        margin: flex;
     }
 
     .our-solutions-list .item .title {
-        font-size: 1rem;
+        font-size: flex;
     }
 
     /* -------------------------
@@ -1268,10 +1420,6 @@ input:checked+.slider:before {
         OUR TECNOLOGIES SECTION
     ------------------------- */
     /* List of tecnologies */
-    .our-tecnologies .list {
-        margin-top: 15%;
-    }
-
     .our-tecnologies .list .field .item .subtitle,
     .our-tecnologies .list .field .subtitle {
         font-size: 1rem;
@@ -1287,14 +1435,11 @@ input:checked+.slider:before {
         min-height: calc(25vh);
     }
 
-    .our-tecnologies .list .biometry .title {
-        margin-top: 3rem;
-    }
-
-    .our-tecnologies .list .biometry .subtitle {
-        top: 0rem;
-        bottom: 2rem;
-        width: 20rem;
+    /* -------------------------
+        SMART WISE CITY SECTION
+    ------------------------- */
+    .smart-wise-city {
+        margin: 1rem;
     }
 }
 
@@ -1351,10 +1496,6 @@ input:checked+.slider:before {
     .our-solutions-list .item {
         flex: 1 1 30%;
         margin: 1rem;
-    }
-
-    .our-solutions-list .item .title {
-        font-size: 2.5rem;
     }
 
     /* -------------------------

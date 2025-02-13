@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Página de Movilidad Sostenible</title>
+    <title>Soluciones de Movilidad Especiales SL</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -12,10 +12,14 @@
     <link rel="alternate" hreflang="es" href="https://solmes.net/es/" />
 </head>
 
-<body>
+<header class="site-header">
+    <!-- Logo -->
+    <a href="#" class="logo-container">
+        <img class="logo" src="../img/logo-solmes.png" alt="Solmes Logo">
+    </a>
 
-    <!-- Navigation bar -->
-    <nav title="Disponible Próximamente">
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
         <ul>
             <li><a href="#" class="active">Inicio</a></li>
             <li><a href="#">Nosotros</a></li>
@@ -25,9 +29,15 @@
         </ul>
     </nav>
 
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" aria-label="Abrir menú">
+        ☰
+    </button>
+</header>
+
+<body>
     <!-- HOME SECTION (home) -->
     <section class="home">
-
         <!-- Main text (title and subtitle) -->
         <div class="home-content">
             <h1 class="title">
@@ -46,19 +56,22 @@
         <!-- Stats card in the bottom right corner -->
         <div class="home-stats-card">
             <div class="stat">
-                <h2>+15</h2>
+                <h2>15+</h2>
                 <p>Premios ganados</p>
             </div>
             <div class="stat">
-                <h2>20</h2>
-                <p>Ciudades</p>
+                <h2>350+</h2>
+                <p>Ciudades mapeadas</p>
             </div>
             <div class="stat">
-                <h2>45M</h2>
-                <p>Personas beneficiadas</p>
+                <h2>10K+</h2>
+                <p>Usuarios activos</p>
+            </div>
+            <div class="stat">
+                <h2>45M+</h2>
+                <p>Usuarios beneficiados</p>
             </div>
         </div>
-
     </section>
 
     <!-- OUR BENEFITS SECTION (our-benefits) -->
@@ -186,7 +199,7 @@
     <section class="park4dis-succes-sample">
         <!-- Image -->
         <img class="image" src="../img/park4dis-succes-sample.png"
-            alt="Captura de pantalla en la aplicacoin web de Park4Dis">
+            alt="Captura de pantalla en la aplicación web de Park4Dis">
 
         <!-- Content -->
         <div class="content">
@@ -207,7 +220,6 @@
                 <h3>Saber más <span class="arrow">&#x279C;</span></h3>
             </a>
         </div>
-
     </section>
 
     <!-- OUR CLIENTS (our-clients) -->
@@ -315,6 +327,7 @@
                     Biometría
                 </h1>
                 <h2 class="subtitle">
+                    <br>
                     Autenticación avanzada mediante
                     reconocimiento facial, huellas o voz,
                     asegurando una experiencia
@@ -344,10 +357,12 @@
     <section class="smart-wise-city">
         <div class="content">
             <h1 class="title">
-                Smart City a Wise City<br>
+                De Smart City a Wise Human City<br>
                 El Usuario En El Centro
             </h1>
-            <button id="emailButton">Contactar con ventas</button>
+            <button id="emailButton">Contactar con nosotros
+                <br>info@solmes.net
+            </button>
         </div>
     </section>
 
@@ -370,9 +385,59 @@
 
     <!-- Floating buttons -->
     <a href="https://solmes.net/en/" class="language-button">
-        <img class="language-flag" src="../img/es.png" alt="Spanish Flag">
+        <img class="language-flag" src="../img/en.png" alt="English Flag">
     </a>
-    <button id="floating-cookie-button" aria-label="Ajustes"><i class="fas fa-cog"></i></button>
+
+    <!--Fondos Feder-->
+    <section id="feder-overlay" class="overlay" style="display:none;">
+        <div id="details-content">
+            <span class="close-button" onclick="closeFederOverlay()"> &times;</span>
+
+            <div id="feder-funding" class="tab-content active">
+                <img src="../img/feder-logo.png" alt="FEDER Funding Banner" class="feder-banner">
+
+                <h1 class="title">Impulsa tu movilidad inteligente, con los planes EDIL y la tecnología de Solmes</h1>
+                <p>
+                    En Solmes, ofrecemos soluciones tecnológicas que encajan perfectamente dentro de los criterios de financiación de los fondos FEDER, concretamente en el programa EDIL.
+                    Hemos participado en numerosos proyectos financiados con fondos FEDER para mejorar la movilidad urbana. Nuestro equipo no solo proporciona tecnología avanzada, sino que también asesora a los ayuntamientos en la definición de las soluciones que optimicen la movilidad en sus ciudades, aprovechando estas ayudas.
+                </p>
+        
+                <div class="highlight">
+                    <strong>La oportunidad está aquí:</strong> las solicitudes para acceder a los fondos FEDER pueden presentarse hasta las 
+                    <strong>15:00 horas del 28 de febrero de 2025</strong>, a través de la Base de Datos Nacional de Subvenciones.
+                </div>
+        
+                <h3 class="subtitle">¿Cómo pueden beneficiarse los ayuntamientos de estos fondos?</h3>
+                <p>Estos fondos permiten financiar proyectos que impulsan la movilidad sostenible y mejoran la gestión del tráfico en las ciudades. Algunas de las soluciones más demandadas incluyen:</p>
+        
+                <ul class="solutions-list">
+                    <li><strong>📍 Smart Parking</strong><br>
+                        Sensores para optimizar el uso de las plazas de aparcamiento. Nuestras soluciones abordan problemas como la congestión y el cumplimiento de las normativas de estacionamiento (zonas de carga y descarga, plazas PMR, etc.). Proporcionamos información clave basada en datos para mejorar la eficiencia y rentabilidad del aparcamiento, beneficiando tanto a la administración como a los ciudadanos.
+                    </li>
+                    <li><strong>♿ Control digital de plazas PMR</strong><br>
+                        Sistemas inteligentes que facilitan el acceso y garantizan el correcto uso de las plazas reservadas por personas autorizadas con movilidad reducida.
+                    </li>
+                </ul>
+        
+                <h3 class="subtitle">Casos de éxito: ciudades que ya han implementado estas soluciones</h3>
+                <p>
+                    Ciudades como <strong>Lloret de Mar, Murcia</strong> y muchas más han llevado a cabo proyectos exitosos gracias a la financiación de los fondos FEDER, contando con la tecnología y nuestra experiencia.
+                </p>
+                <p>
+                    Estos proyectos demuestran la viabilidad y el impacto positivo de nuestras soluciones, alineadas con los objetivos de financiación de los fondos FEDER-EDIL.
+                </p>
+        
+                <h3 class="subtitle">¿Tu ayuntamiento quiere aprovechar esta oportunidad?</h3>
+                <p>
+                    En Solmes, no solo proporcionamos la tecnología, sino que también ayudamos a los ayuntamientos en la identificación y estructuración de proyectos para que cumplan con los requisitos de financiación.
+                </p>
+        
+                <a href="mailto:info@solmes.net" class="contact-button">📩 Contacta con nosotros</a>
+        
+                <p class="cta">Te asesoraremos sobre cómo acceder a estos fondos y mejorar la movilidad de tu ciudad. ¡No dejes pasar esta oportunidad de financiación europea!</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Cookie banner -->
     <section id="cookie-banner" style="display:none;">
@@ -395,7 +460,7 @@
     <!-- Settings overlays -->
     <section id="legal-overlay" class="overlay">
         <div id="details-content">
-            <span class="close-button" onclick="closeLegalDelay()"> &times;</span>
+            <span class="close-button" onclick="closeLegalOverlay()"> &times;</span>
 
             <div id="legal-advise" class="tab-content active">
                 <h2>Aviso Legal</h2>
@@ -617,7 +682,8 @@
                     Esta web utiliza Google Analytics para recopilar información anónima tal como el número de
                     visitantes del sitio, o las páginas más populares.
                     <br><br>
-                    Dejar esta cookie activa nos permite mejorar nuestra web.<br>
+                    Dejar esta cookie activa nos permite mejorar nuestra web.
+                    <br><br>
                 </p>
 
                 <label class="switch" for="essentialCookies"> <input type="checkbox" id="essentialCookies" checked
@@ -681,6 +747,10 @@
 
 
     <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-bar').classList.toggle('active');
+        });
+
         // Temporary unavailable nav-bar and footer
         const navLinks = document.querySelectorAll('nav a');
         const footerLinks = document.querySelectorAll('footer a');
@@ -741,12 +811,10 @@
                 setTimeout(() => {
                     document.body.removeChild(message);
                 }, 3000);
-
-
-
             });
         });
 
+        const federOverlay = document.getElementById('feder-overlay');
         const cookieBanner = document.getElementById('cookie-banner');
         const acceptButton = document.getElementById('accept-cookies');
         const declineButton = document.getElementById('decline-cookies');
@@ -755,16 +823,13 @@
         const privacyOverlay = document.getElementById('privacy-overlay');
         const cookiesOverlay = document.getElementById('cookies-overlay');
         const analyticsCheckbox = document.getElementById('analyticsCookies');
-        const marketingCheckbox = document.getElementById('marketingCookies');
         const saveButton = document.getElementById('save-cookie-settings');
         const learnMoreLink = document.getElementById('learn-more');
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
         const floatingLegalButton = document.getElementById('legal-advice');
         const floatingPrivacyButton = document.getElementById('privacy-policy');
-        const floatingCookieButton = document.getElementById('floating-cookie-button');
-        const cookieButton = document.getElementById('cookies');
-
+        const floatingCookieButton = document.getElementById('cookies');
 
         // Check localStorage *immediately*
         let consentCookie = localStorage.getItem('cookie_consent');
@@ -775,6 +840,7 @@
             cookieBanner.style.display = 'none';
         }
 
+        federOverlay.style.display = 'block';
 
         acceptButton.addEventListener('click', () => {
             localStorage.setItem('cookie_consent', '{"analytics": "true"}');
@@ -787,7 +853,7 @@
         });
 
         configureButton.addEventListener('click', () => {
-            openCookieDelay();
+            openCookieOverlay();
         });
 
         saveButton.addEventListener('click', () => {
@@ -805,15 +871,15 @@
             cookiesOverlay.style.display = 'block';
         });
 
-        function openLegalDelay() {
+        function openLegalOverlay() {
             legalOverlay.style.display = 'block';
         }
 
-        function openPrivacyDelay() {
+        function openPrivacyOverlay() {
             privacyOverlay.style.display = 'block';
         }
 
-        function openCookieDelay() {
+        function openCookieOverlay() {
             cookiesOverlay.style.display = 'block';
             let consentCookie = localStorage.getItem('cookie_consent');
             if (consentCookie !== null) {
@@ -822,7 +888,11 @@
             }
         }
 
-        function closeLegalDelay() {
+        function closeFederOverlay() {
+            federOverlay.style.display = 'none';
+        }
+
+        function closeLegalOverlay() {
             legalOverlay.style.display = 'none';
         }
 
@@ -853,19 +923,15 @@
         });
 
         floatingLegalButton.addEventListener('click', () => {
-            openLegalDelay();
+            openLegalOverlay();
         });
 
         floatingPrivacyButton.addEventListener('click', () => {
-            openPrivacyDelay();
+            openPrivacyOverlay();
         });
 
         floatingCookieButton.addEventListener('click', () => {
-            openCookieDelay();
-        });
-
-        cookieButton.addEventListener('click', () => {
-            openCookieDelay();
+            openCookieOverlay();
         });
     </script>
 
