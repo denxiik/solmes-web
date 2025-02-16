@@ -13,10 +13,17 @@
 </head>
 
 <header class="site-header">
-    <!-- Logo -->
-    <a href="#" class="logo-container">
-        <img class="logo" src="../img/logo-solmes.png" alt="Solmes Logo">
-    </a>
+    <div class="logo-language-container">
+        <!-- Logo -->
+        <a href="#" class="logo-container">
+            <img class="logo" src="../img/logo-solmes.svg" alt="Solmes Logo">
+        </a>
+
+        <!-- Language button -->
+        <!--a href="https://solmes.net/en/" class="language-button">
+            <img class="language-flag" src="../img/en.png" alt="English Flag">
+        </a-->
+    </div>
 
     <!-- Navigation Bar -->
     <nav class="nav-bar">
@@ -25,7 +32,7 @@
             <li><a href="#">Nosotros</a></li>
             <li><a href="#">Ciudades</a></li>
             <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#" id="emailContact">Contacto</a></li>
         </ul>
     </nav>
 
@@ -752,7 +759,7 @@
         });
 
         // Temporary unavailable nav-bar and footer
-        const navLinks = document.querySelectorAll('nav a');
+        const navLinks = document.querySelectorAll('nav a:not(#emailContact)');
         const footerLinks = document.querySelectorAll('footer a');
         navLinks.forEach(link => {
             link.addEventListener('click', function (event) {
@@ -766,37 +773,36 @@
                 setTimeout(() => {
                     document.body.removeChild(message);
                 }, 3000);
-
-
-
             });
         });
 
-        document.getElementById("emailButton").addEventListener("click", function () {
-            var email = "info@solmes.com";
-            var subject = encodeURIComponent("Consulta de ventas");
-            var body = encodeURIComponent("Hola,\n\nEstoy interesado en conocer más sobre sus soluciones.");
+        document.querySelectorAll("#emailButton, #emailContact").forEach(element => {
+            element.addEventListener("click", function () {
+                var email = "info@solmes.com";
+                var subject = encodeURIComponent("Consulta de ventas");
+                var body = encodeURIComponent("Hola,\n\nEstoy interesado en conocer más sobre sus soluciones.");
 
-            var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
-            var gmailWebLink = "https://mail.google.com/mail/?view=cm&fs=1&to=" + email + "&su=" + subject + "&body=" + body;
-            var gmailAppAndroid = "intent://compose?to=" + email + "&subject=" + subject + "&body=" + body + "#Intent;scheme=mailto;package=com.google.android.gm;end;";
+                var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
+                var gmailWebLink = "https://mail.google.com/mail/?view=cm&fs=1&to=" + email + "&su=" + subject + "&body=" + body;
+                var gmailAppAndroid = "intent://compose?to=" + email + "&subject=" + subject + "&body=" + body + "#Intent;scheme=mailto;package=com.google.android.gm;end;";
 
-            var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-            var isAndroid = /Android/i.test(navigator.userAgent);
+                var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+                var isAndroid = /Android/i.test(navigator.userAgent);
 
-            if (isAndroid) {
-                window.location.href = gmailAppAndroid;
-            } else if (isIOS) {
-                window.open(gmailWebLink, "_blank");
-            } else {
-                window.location.href = mailtoLink;
-            }
-
-            setTimeout(function () {
-                if (confirm("¿No se abrió ningún cliente de correo? ¿Quieres abrir Gmail en su lugar?")) {
+                if (isAndroid) {
+                    window.location.href = gmailAppAndroid;
+                } else if (isIOS) {
                     window.open(gmailWebLink, "_blank");
+                } else {
+                    window.location.href = mailtoLink;
                 }
-            }, 2000);
+
+                setTimeout(function () {
+                    if (confirm("¿No se abrió ningún cliente de correo? ¿Quieres abrir Gmail en su lugar?")) {
+                        window.open(gmailWebLink, "_blank");
+                    }
+                }, 2000);
+            })
         });
 
         footerLinks.forEach(link => {
