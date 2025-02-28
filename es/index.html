@@ -396,57 +396,6 @@
         <img class="language-flag" src="../img/en.png" alt="English Flag">
     </a>
 
-    <!--Fondos Feder-->
-    <section id="feder-overlay" class="overlay" style="display:none;">
-        <div id="details-content">
-            <span class="close-button" onclick="closeFederOverlay()"> &times;</span>
-
-            <div id="feder-funding" class="tab-content active">
-                <img src="../img/feder-logo.png" alt="FEDER Funding Banner" class="feder-banner">
-
-                <h1 class="title">Impulsa tu movilidad inteligente, con los planes EDIL y la tecnología de Solmes</h1>
-                <p>
-                    En Solmes, ofrecemos soluciones tecnológicas que encajan perfectamente dentro de los criterios de financiación de los fondos FEDER, concretamente en el programa EDIL.
-                    Hemos participado en numerosos proyectos financiados con fondos FEDER para mejorar la movilidad urbana. Nuestro equipo no solo proporciona tecnología avanzada, sino que también asesora a los ayuntamientos en la definición de las soluciones que optimicen la movilidad en sus ciudades, aprovechando estas ayudas.
-                </p>
-        
-                <div class="highlight">
-                    <strong>La oportunidad está aquí:</strong> las solicitudes para acceder a los fondos FEDER pueden presentarse hasta las 
-                    <strong>15:00 horas del 28 de febrero de 2025</strong>, a través de la Base de Datos Nacional de Subvenciones.
-                </div>
-        
-                <h3 class="subtitle">¿Cómo pueden beneficiarse los ayuntamientos de estos fondos?</h3>
-                <p>Estos fondos permiten financiar proyectos que impulsan la movilidad sostenible y mejoran la gestión del tráfico en las ciudades. Algunas de las soluciones más demandadas incluyen:</p>
-        
-                <ul class="solutions-list">
-                    <li><strong>📍 Smart Parking</strong><br>
-                        Sensores para optimizar el uso de las plazas de aparcamiento. Nuestras soluciones abordan problemas como la congestión y el cumplimiento de las normativas de estacionamiento (zonas de carga y descarga, plazas PMR, etc.). Proporcionamos información clave basada en datos para mejorar la eficiencia y rentabilidad del aparcamiento, beneficiando tanto a la administración como a los ciudadanos.
-                    </li>
-                    <li><strong>♿ Control digital de plazas PMR</strong><br>
-                        Sistemas inteligentes que facilitan el acceso y garantizan el correcto uso de las plazas reservadas por personas autorizadas con movilidad reducida.
-                    </li>
-                </ul>
-        
-                <h3 class="subtitle">Casos de éxito: ciudades que ya han implementado estas soluciones</h3>
-                <p>
-                    Ciudades como <strong>Lloret de Mar, Murcia</strong> y muchas más han llevado a cabo proyectos exitosos gracias a la financiación de los fondos FEDER, contando con la tecnología y nuestra experiencia.
-                </p>
-                <p>
-                    Estos proyectos demuestran la viabilidad y el impacto positivo de nuestras soluciones, alineadas con los objetivos de financiación de los fondos FEDER-EDIL.
-                </p>
-        
-                <h3 class="subtitle">¿Tu ayuntamiento quiere aprovechar esta oportunidad?</h3>
-                <p>
-                    En Solmes, no solo proporcionamos la tecnología, sino que también ayudamos a los ayuntamientos en la identificación y estructuración de proyectos para que cumplan con los requisitos de financiación.
-                </p>
-        
-                <a href="mailto:info@solmes.net" class="contact-button">📩 Contacta con nosotros</a>
-        
-                <p class="cta">Te asesoraremos sobre cómo acceder a estos fondos y mejorar la movilidad de tu ciudad. ¡No dejes pasar esta oportunidad de financiación europea!</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Cookie banner -->
     <section id="cookie-banner" style="display:none;">
         <p>Utilizamos una selección de cookies propias y de terceros para mejorar su experiencia de navegación, analizar
@@ -596,7 +545,7 @@
                 <p>Soluciones de movilidad especiales SL<br>
                     CIF: B67421628<br>
                     Domicilio social: C/Biscaia 371 CP: 08027 Barcelona<br>
-                    Correo electrónico: info@solmes.net.org</p>
+                    Correo electrónico: info@solmes.net</p>
 
                 <h3><br>FINALIDADES Y LEGITIMACIÓN DEL TRATAMIENTO</h3>
                 <table>
@@ -779,7 +728,7 @@
 
         document.querySelectorAll("#emailButton, #emailContact").forEach(element => {
             element.addEventListener("click", function () {
-                var email = "info@solmes.com";
+                var email = "info@solmes.net";
                 var subject = encodeURIComponent("Consulta de ventas");
                 var body = encodeURIComponent("Hola,\n\nEstoy interesado en conocer más sobre sus soluciones.");
 
@@ -821,7 +770,6 @@
             });
         });
 
-        const federOverlay = document.getElementById('feder-overlay');
         const cookieBanner = document.getElementById('cookie-banner');
         const acceptButton = document.getElementById('accept-cookies');
         const declineButton = document.getElementById('decline-cookies');
@@ -846,8 +794,6 @@
         } else {
             cookieBanner.style.display = 'none';
         }
-
-        federOverlay.style.display = 'block';
 
         acceptButton.addEventListener('click', () => {
             localStorage.setItem('cookie_consent', '{"analytics": "true"}');
@@ -893,10 +839,6 @@
                 let cookie_settings = JSON.parse(consentCookie);
                 analyticsCheckbox.checked = cookie_settings.analytics === 'true';
             }
-        }
-
-        function closeFederOverlay() {
-            federOverlay.style.display = 'none';
         }
 
         function closeLegalOverlay() {
