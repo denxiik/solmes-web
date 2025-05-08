@@ -117,6 +117,20 @@ tr:last-child td {
     border-bottom: none;
 }
 
+/* Links */
+#privacy-policy-link,
+#cookies-policy-link {
+  color: blue;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#privacy-policy-link:hover,
+#cookies-policy-link:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
+
 /* -------------------------
    HEADER STYLES
 ------------------------- */
