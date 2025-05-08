@@ -122,15 +122,13 @@ tr:last-child td {
 }
 
 /* Links */
-#link-privacy-policy,
-#link-cookies-policy {
+.link-policy {
     color: blue;
     cursor: pointer;
     text-decoration: none;
 }
 
-#link-privacy-policy:hover,
-#link-cookies-policy:hover {
+.link-policy:hover {
     color: darkblue;
     text-decoration: underline;
 }
