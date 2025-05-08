@@ -103,16 +103,20 @@ table {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
-th, td {
+
+th,
+td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #e0e0e0;
 }
+
 th {
     background-color: #f0f0f0;
     color: #2c3e50;
-    font-weight: bold; 
+    font-weight: bold;
 }
+
 tr:last-child td {
     border-bottom: none;
 }
@@ -120,15 +124,15 @@ tr:last-child td {
 /* Links */
 #link-privacy-policy,
 #link-cookies-policy {
-  color: blue;
-  cursor: pointer;
-  text-decoration: none;
+    color: blue;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 #link-privacy-policy:hover,
 #link-cookies-policy:hover {
-  color: darkblue;
-  text-decoration: underline;
+    color: darkblue;
+    text-decoration: underline;
 }
 
 /* -------------------------
@@ -1200,6 +1204,7 @@ input:checked+.slider:before {
 
 /* Small devices (phones, 768px and down) */
 @media (max-width: 768px) {
+
     /* Nav bar */
     .nav-bar {
         display: none;
@@ -1227,24 +1232,24 @@ input:checked+.slider:before {
         text-decoration: none;
         transition: background-color 0.3s ease, color 0.3s ease;
     }
-    
+
     /* Hover effect for mobile */
     .nav-bar a:hover {
         background-color: rgba(1, 49, 153, 0.1);
     }
-    
+
     /* Active menu state */
     .nav-bar.active {
         display: block;
     }
-    
+
     /* Active link inside the mobile menu */
     .nav-bar.active a.active {
         background-color: #013199;
         color: white;
         font-weight: bold;
     }
-    
+
     /* Mobile menu toggle button */
     .menu-toggle {
         display: block;
@@ -1359,7 +1364,7 @@ input:checked+.slider:before {
     .our-tecnologies .list .field .bluetooth-tecnologie {
         height: fit-content;
     }
-    
+
     .our-tecnologies .list .biometry {
         background-position: center;
         padding-bottom: 2rem;
@@ -1372,6 +1377,7 @@ input:checked+.slider:before {
 
 /* Large devices (desktops, 992px and down) */
 @media (max-width: 992px) {
+
     /* -------------------------
        BUTTON
     ------------------------- */
