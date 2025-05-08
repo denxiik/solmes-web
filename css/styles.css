@@ -118,15 +118,15 @@ tr:last-child td {
 }
 
 /* Links */
-#privacy-policy-link,
-#cookies-policy-link {
+#link-privacy-policy,
+#link-cookies-policy {
   color: blue;
   cursor: pointer;
   text-decoration: none;
 }
 
-#privacy-policy-link:hover,
-#cookies-policy-link:hover {
+#link-privacy-policy:hover,
+#link-cookies-policy:hover {
   color: darkblue;
   text-decoration: underline;
 }

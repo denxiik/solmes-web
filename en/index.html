@@ -467,9 +467,9 @@
                 <h3>5. Confidentiality and protection of personal data</h3>
                 <p>The owner will process the personal data you provide through your browsing of this website, in
                     accordance with current data protection regulations. For more information, please consult the <span
-                        id="privacy-policy-link"><u>Privacy Policy</u></span>.</p>
+                        id="link-privacy-policy"><u>Privacy Policy</u></span>.</p>
                 <p>The owner uses cookies on this website. For more information, please consult the <span
-                        id="cookies-policy-link"><u>Cookies Policy</u></span>.</p>
+                        id="link-cookies-policy"><u>Cookies Policy</u></span>.</p>
 
                 <h3>6. Responsibility</h3>
                 <p>The holder disclaims any liability for any damage that the user, or consequently any third party, may
@@ -1013,6 +1013,8 @@
         const floatingLegalButton = document.getElementById('legal-advice');
         const floatingPrivacyButton = document.getElementById('privacy-policy');
         const floatingCookieButton = document.getElementById('cookies');
+        const privacyPolicyLink = document.getElementById('link-privacy-policy');
+        const cookiesPolicyLink = document.getElementById('link-cookies-policy');
 
         // Check localStorage *immediately*
         let consentCookie = localStorage.getItem('cookie_consent');
@@ -1108,6 +1110,16 @@
         });
 
         floatingCookieButton.addEventListener('click', () => {
+            openCookieOverlay();
+        });
+
+        privacyPolicyLink.addEventListener('click', () => {
+            closeLegalOverlay();
+            openPrivacyOverlay();
+        });
+
+        cookiesPolicyLink.addEventListener('click', () => {
+            closeLegalOverlay();
             openCookieOverlay();
         });
     </script>
