@@ -123,14 +123,9 @@ tr:last-child td {
 
 /* Links */
 .link-policy {
-    color: blue;
+    color: #1326e4;
     cursor: pointer;
     text-decoration: none;
-}
-
-.link-policy:hover {
-    color: darkblue;
-    text-decoration: underline;
 }
 
 /* -------------------------
